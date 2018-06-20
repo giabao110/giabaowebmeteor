@@ -1,0 +1,35 @@
+.ubutu-bold-font {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ubutu-bolditalic-font {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-style: italic;
+}
+
+.ubutu-italic-font {
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-style: italic;
+}
+
+.ubutu-light-font {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubutu-medium-font {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubutu-regular {
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-style: normal;
+}
