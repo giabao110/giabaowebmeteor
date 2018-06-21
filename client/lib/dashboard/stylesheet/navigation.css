@@ -1,18 +1,16 @@
-.navdropdown  {
+a.navdropdown  {
     color: #969696;
+    padding: 0 17px;
 }
 
 .navbackground{
     background-color: #000000;
 }
 
+/* LOGO */
 .logo-color{
     color:#56ab09;
     font-size: 16pt
-}
-
-.nav-menu{
-    font-size:9pt;
 }
 
 .navbar-logo{
@@ -25,11 +23,44 @@
     line-height: inherit;
     white-space: nowrap;
 }
+.logo-brand{
+    vertical-align: middle;
+    border-style: none;
+    width: 16%;
+    height: auto;
+    padding-bottom: 4px;
+    margin-right: 7px;
+}
+
+
+/* AVT USER*/
+.avt-user{
+    height: auto;
+    inline-size: 40%;
+    margin-right: 12px;
+}
+
+
+/* NAVBAR */
+.nav-menu{
+    font-size:9pt;
+}
+
+nav.nav-wrap {
+    padding: 0 1rem;
+}
 
 .none-hover a:hover{
     color:none;
     text-decoration: none;
 }
+
+.navbar-expand-lg .navbar-nav a.nav-items {
+    padding-right:27px;
+    padding-left:0px;
+}
+
+
 
 .change-input{
     display: block;
@@ -43,6 +74,8 @@
     background-clip: padding-box;
     border: 2px;
     border-radius: 15px;
+    background: #fff #fff url("/img/topbar/logo.png") no-repeat right .75rem center ;
+
 }
 
 .change-input:focus{
@@ -57,6 +90,7 @@
     padding-right: 33px;
 }
 
-.nav-items li.nav-item a.nav-links{
-    padding-right:50px ;
+/* FORM */
+form.padding{
+    margin: 11px 0;
 }
