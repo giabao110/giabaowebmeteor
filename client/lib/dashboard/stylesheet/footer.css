@@ -1,0 +1,79 @@
+.footer-wraper{
+    padding-top: 22px;
+    border-top: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* LEFT */
+.football-wraper-left{
+    display: flex;
+    justify-content: flex-start;
+}
+.football-wraper-left div{
+    width: 145px;
+}
+/* LOGO */
+.footer-logo-color{
+    color:#56ab09;
+    font-size: 13pt;
+}
+
+.footer-logo-brand{
+    vertical-align: middle;
+    border-style: none;
+    width: 14%;
+    height: auto;
+    padding-bottom: 4px;
+    margin-right: 7px;
+}
+.footer-navbar-logo:hover{
+    outline: none;
+    color:none;
+    text-decoration: none;
+}
+
+/* NAV */
+nav.footer-wraper-left-nav ul{
+    display: flex;
+    list-style: none;
+}
+nav.footer-wraper-left-nav ul li{
+    color: #8e8e8e;
+    font-size:8.5pt;
+    padding-top: 7px;
+}
+nav.footer-wraper-left-nav ul li#Dow{
+    margin-right:23px;
+}
+
+
+
+/* RIGHT */
+.football-wraper-right .social{
+    display: flex;
+    justify-content: flex-end;
+}
+div.fb img{
+        margin: 0 0 auto auto;
+    inline-size: 9px;
+    margin-left: 23px;
+}
+div.twi img{
+    margin: 0 0 auto auto;
+    inline-size: 17px;
+    margin-left: 23px;
+}
+div.insta img{
+    margin: 0 0 auto auto;
+    inline-size: 16px;
+    margin-left: 23px;
+}
+
+
+.copyright{
+    color: #8e8e8e;
+    font-size:8.5pt;
+    padding-bottom: 20px;
+}

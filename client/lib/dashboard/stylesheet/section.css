@@ -1,0 +1,198 @@
+/* DIV */
+.section-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-div-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 31px;
+}
+
+.section-form-wraper{
+    width: 463px;
+    height: 159px;
+    border: 1px solid #dcdcdc;
+    position: relative;
+}
+
+.section-form{
+    position: absolute;
+    display: flex;
+    flex-direction: column
+}
+
+.section-form-above{
+    display: flex;
+    position: relative;
+    height: 123px; 
+    border-bottom: 1px solid #dcdcdc;
+    justify-content: flex-start;
+}
+
+/*  ABOVE LEFT */
+.section-form-above-left{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+#img-above-left1{
+    padding: 20px 24px 0 31px;
+    inline-size: 128px;
+
+}
+
+#img-above-left2{
+    padding: 7px 24px 7px 31px;
+    inline-size: 117px;
+}
+
+/* ABOVE RIGHT */
+.section-form-above-right{
+    width: 100%;
+}
+/* TITLE */
+#section-title{
+    font-size: 13.5pt;
+    padding-top:20px;
+}
+#section-stadium{
+    padding-top:5px;
+    font-size:8.5pt;
+    color:#737373;
+}
+#section-stadium img{
+    vertical-align: middle;
+    inline-size: 25px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+}
+
+/* TIME */
+.section-time{
+    display: flex;
+    justify-content: flex-start;
+}
+.section-time-left div.ubutu-light-font{
+    color:#56ab0a;
+    font-size: 26.5pt;
+    padding-right: 8px;
+}
+
+.section-time-left{
+    display: flex;
+}
+.section-time-right{
+    font-size: 8.5pt;
+}
+.section-time-right .info{
+    padding-top:10px;
+    display: flex;
+}
+.section-time-right .info #day{
+    width: 71px;
+    border-right: 1px solid #dcdcdc;
+}
+.section-time-right .info #from{
+    padding-left: 18px;
+}
+.section-time-right .info #time{
+    padding-left: 10px;
+    color:#56ab0a;
+}
+
+/* BELOW */
+.section-form-below{
+    display: flex;
+}
+/* RIGHT */
+.section-form-below-left{
+    display: flex;
+    width: 145px;
+    border-right: 1px solid #dcdcdc;
+    height: 35px;
+    overflow: hidden;
+}
+/* KING */
+div.section-form-below-left span#king{
+    padding-right: 8px;
+    padding-left: 12px;
+    padding-top: 3px;
+}
+div.section-form-below-left span#king img{
+    inline-size: 13px;
+}
+/* LOGOHAONGUYEN */
+div.section-form-below-left span#haonguyen{
+    padding-top: 3px;
+}
+div.section-form-below-left span#haonguyen img{
+    inline-size: 21px;
+}
+div.section-form-below-left span#haonguyenname{
+    padding-left: 8px;
+    font-size: 8.5pt;
+    padding-top: 8px;
+}
+
+/* CENTER */
+.section-form-below-center{
+    display: flex;
+    align-items: center;
+     width: 240px;
+}
+
+img#people{
+    padding: 12px 8px 12px 11px;
+    inline-size: 34px;
+}
+div#players{
+    font-size: 8.5pt;
+    color:#56ab0a;
+}
+/* RIGHT */
+.section-form-below-right{
+    
+}
+
+/* BUTTON */
+.section-button{
+    font-size: 8.5pt;
+    border-radius: 0px;
+    padding-left: 23px;
+    background: #56ab0a url(img/join.png) no-repeat left center;
+    background-size: 9px;
+    background-position-x: 16px;
+    color: #fff;
+    width: 81px;
+    height: 35px;
+ }
+
+ .section-button:hover{ 
+    cursor: pointer; 
+    outline: 4px auto #56ab0a;
+ }
+ button.section-button:focus{
+    cursor: pointer; 
+    outline: 4px auto #56ab0a;
+}
+
+/* LOADING */
+.section-loading{
+    margin-top:55px;
+    margin-bottom:91px;
+    text-align: center;
+}
+.section-loading span{
+    font-size: 8.5pt;
+    color:#2b2b2b;
+}
+.section-loading img{
+    inline-size: 16px;
+    margin-right: 10px;
+}

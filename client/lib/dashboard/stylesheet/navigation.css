@@ -1,96 +1,125 @@
-a.navdropdown  {
-    color: #969696;
-    padding: 0 17px;
-}
 
+/* NAVIGATION */
 .navbackground{
     background-color: #000000;
+    display: block;
+}
+
+div.navbar-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    position: relative;
 }
 
 /* LOGO */
 .logo-color{
     color:#56ab09;
-    font-size: 16pt
+    font-size: 14.5pt;
 }
 
-.navbar-logo{
-    margin-right: 34px;
-    display: inline-block;
-    padding-top: .3125rem;
-    padding-bottom: .3125rem;
-    /* margin-right: 1rem; */
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap;
-}
 .logo-brand{
     vertical-align: middle;
     border-style: none;
-    width: 16%;
+    width: 14%;
     height: auto;
     padding-bottom: 4px;
     margin-right: 7px;
 }
-
-
-/* AVT USER*/
-.avt-user{
-    height: auto;
-    inline-size: 40%;
-    margin-right: 12px;
-}
-
-
-/* NAVBAR */
-.nav-menu{
-    font-size:9pt;
-}
-
-nav.nav-wrap {
-    padding: 0 1rem;
-}
-
-.none-hover a:hover{
+.navbar-logo:hover{
+    outline: none;
     color:none;
     text-decoration: none;
 }
 
-.navbar-expand-lg .navbar-nav a.nav-items {
-    padding-right:27px;
-    padding-left:0px;
-}
 
-
-
-.change-input{
+/* SEARCH */
+input.nav-change-input {
     display: block;
-    width: 225px;
-    height: 28px;
-    padding: .375rem .75rem;
-    font-size: 9pt;
-    line-height: 1.5;
-    color: #737373;
+    width: 224px;
+    height: 23px;
+    padding: 10px 0 10px 29px;
+    font-size: 7.5pt;
+    color:  #ebebeb;
     background-color: #232323;
     background-clip: padding-box;
-    border: 2px;
-    border-radius: 15px;
-    background: #fff #fff url("/img/topbar/logo.png") no-repeat right .75rem center ;
-
+    border: 0px;
+    border-radius: 7px;
+    background: #232323 url(img/header/search.png) no-repeat left center;
+    background-size: 10px;
+    background-position-x: 12px;
+    margin: 0 5px 0 0;
 }
 
-.change-input:focus{
-    background-color: #232323;
+input.nav-change-input:hover{
+    outline: none;
 }
 
-.change-input:hover{
-    color:none;
+input.nav-change-input:focus{
+    outline: none;
+}
+
+/* BUTTON */
+a.button-padding{
+    padding:0 0 0 25px;
+}
+
+nav ul.navbar-items {
+    margin: 0;
+    padding: 0;    
+}
+
+nav li.nav-item{
+    display: inline-block;
+    list-style: none;
+}
+
+ nav ul li a.button-padding.nav-items.nav-link.text-uppercase{
+     color: #c9c9c9;
+     font-size: 7.5pt;
+ }
+
+ nav ul li a:hover{
     text-decoration: none;
-}
-.padding-search{
-    padding-right: 33px;
+    outline: none;
 }
 
-/* FORM */
-form.padding{
-    margin: 11px 0;
+nav ul li a:hover{
+    color:#56ab09;
 }
+
+
+/* USER */
+.logo-div-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-div-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.avt-user{
+    inline-size: 34%;
+    margin-right: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,13 +1,15 @@
+
 import React from 'react';
 
 
 class Header extends React.Component {
     render() {
       return (
-				<div className="header-row container">
-					<div className="header-title ubutu-light-font">
-							<span className="match">Match</span>
-					</div>
+				<div className="football-wrapper header-row ">
+						<div className="logo-div-start">
+						<div className="header-title ubutu-light-font">
+							<span>Match</span>
+						</div>
 					<div className="box">
 						<div className="header-col-nearest ">
 							<div className="input-group ">
@@ -28,18 +30,19 @@ class Header extends React.Component {
 								</div>
 							</div>
 						</div>
-						<div>
-							<form className="padding padding-search form-inline ">
-								<input className="header-change-input ubutu-regular-font " type="search" placeholder="Search Team..." aria-label="Search" />
-							</form>
 						</div>
+						<div className="logo-div-end">
+						<form className="padding padding-search form-inline ">
+							<input className="header-change-input ubutu-regular-font " type="search" placeholder="Search Team..." aria-label="Search" />
+						</form>
 						<div>
-									<button type="button" className="header-button ubutu-regular-font text-uppercase btn btn-success ">Quick Match</button>
+							<button type="button" className="header-button ubutu-regular-font text-uppercase ">Quick Match</button>
 						</div>
+						</div>
+						
 					</div>
 					);
 				}
 			}
   
 	export default Header;
-	

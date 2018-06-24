@@ -1,5 +1,5 @@
 .football-wraper{
-  max-width: 900px;
+  max-width: 975px;
   padding: 0px 15px;
   width: 100%;
   display: block;
@@ -9,4 +9,9 @@
 
 .logo{
   background-image: url('');
+}
+
+
+div.slick-slide.slick-active.slick-cloned{
+  width: 40px;
 }

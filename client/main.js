@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/jquery/dist/jquery.min.js'
+
 import './main.html';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
