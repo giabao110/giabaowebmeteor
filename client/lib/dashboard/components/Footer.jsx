@@ -5,7 +5,7 @@ class Footer extends React.Component {
     render() {
       return (
           <div>
-            <div className="footer-wraper">
+            <div>
               <div className="football-wraper-left">
                 <div>
                   <img className="footer-logo-brand" src="/img/topbar/logo.png" alt=""/>

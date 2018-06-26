@@ -46,7 +46,7 @@ class Matchrequest extends React.Component {
 								</div>
 								<div className="ubutu-bold-font match-vs">vs</div>
 										<div className="modal-content-match-team2"> 
-												<img id="logo" src="img/zigvy.png" alt=""/>
+												<img id="logo" src="img/zigvylogo/zigvy.png" alt=""/>
 												<div className="ubutu-regular-font" id="name">
 														Zigvy Soccer Club
 												</div>

@@ -61,6 +61,12 @@ table {
   margin: 0 auto;
   color:#2b2b2b;
 }
+
+/* FONT SIZE */
+/* 20 */
+.font-small-20{
+	font-size:6.5pt;
+}
 /* 22 */
 .font-ssmall{
 	font-size:7.5pt;
@@ -93,9 +99,15 @@ table {
 .font-large-70{
 	font-size:31.5pt;
 }
+
+
+/* COLOR */
 .green{
 	color:#56ab0a;
 }
 .gray{
 	color:#909090;
+}
+.gray1{
+  color:#7f7f7f
 }

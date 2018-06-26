@@ -8,9 +8,6 @@ import Bayern from './tab/Bayern';
 import Madrid from './tab/Madrid';
 import Barcelona from './tab/Barcelona';
 
-
-
-
 class Section extends React.Component {
     render() {
       return (

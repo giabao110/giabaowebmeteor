@@ -5,11 +5,13 @@ import './main.html';
 import  React, {Component} from 'react';
 import  ReactDOM from 'react-dom';
 import  Dashboard from '../client/lib/dashboard/dashboard.js';
-import  './lib/container.css';
+import  Grounds from '../client/lib/grounds/grounds.js';
+import  './lib/stylesheet/container.css';
+import  './lib/stylesheet/font.css';
 
 
 if(Meteor.isClient){
   Meteor.startup(function(){
-    ReactDOM.render(<Dashboard/>,document.getElementById('root'));
+    ReactDOM.render(<Grounds/>,document.getElementById('root'));
   });
 }
