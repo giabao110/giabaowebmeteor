@@ -3,7 +3,6 @@
     border-top: 1px solid #dcdcdc;
     display: flex;
     justify-content: space-between;
-    
 }
 
 /* LEFT */
@@ -12,14 +11,9 @@
     justify-content: flex-start;
 }
 .football-wraper-left div{
-    width: 145px;
+    width: 206px;
 }
 /* LOGO */
-.footer-logo-color{
-    color:#56ab09;
-    font-size: 13pt;
-}
-
 .footer-logo-brand{
     vertical-align: middle;
     border-style: none;
@@ -41,7 +35,6 @@ nav.footer-wraper-left-nav ul{
 }
 nav.footer-wraper-left-nav ul li{
     color: #8e8e8e;
-    font-size:8.5pt;
     padding-top: 7px;
 }
 nav.footer-wraper-left-nav ul li#Dow{
@@ -71,9 +64,7 @@ div.insta img{
     margin-left: 23px;
 }
 
-
 .copyright{
     color: #8e8e8e;
-    font-size:8.5pt;
     padding-bottom: 20px;
 }

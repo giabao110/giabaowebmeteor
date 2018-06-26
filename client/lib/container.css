@@ -1,17 +1,101 @@
+/* RESET CSS3 */
+div.slick-slide.slick-active.slick-cloned{
+  width: 40px;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* CONTAINER */
 .football-wraper{
   max-width: 975px;
   padding: 0px 15px;
   width: 100%;
   display: block;
   margin: 0 auto;
-
+  color:#2b2b2b;
 }
-
-.logo{
-  background-image: url('');
+/* 22 */
+.font-ssmall{
+	font-size:7.5pt;
 }
-
-
-div.slick-slide.slick-active.slick-cloned{
-  width: 40px;
+/* 24 */
+.font-small{
+	font-size:9.5pt;
+}
+/* 28 */
+.font-small-28{
+	font-size:10.5pt;
+}
+/* 32 */
+.font-large{
+	font-size:12.5pt;
+}
+/* 34 */
+.font-large-34{
+	font-size:13.5pt;
+}
+/* 36 */
+.font-large-36{
+	font-size:14.5pt;
+}
+/* 60 */
+.font-large-60{
+	font-size:26.5pt;
+}
+/* 70 */
+.font-large-70{
+	font-size:31.5pt;
+}
+.green{
+	color:#56ab0a;
+}
+.gray{
+	color:#909090;
 }

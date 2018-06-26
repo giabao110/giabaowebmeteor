@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Ubuntu';
-    src: url('./stylesheet.css');
-    src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
-        url('./Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+    src: url('./Ubuntu-Bold.eot');
+    src: url('./Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
         url('./Ubuntu-Bold.woff2') format('woff2'),
         url('./Ubuntu-Bold.woff') format('woff'),
         url('./Ubuntu-Bold.ttf') format('truetype'),

@@ -58,12 +58,10 @@
 }
 /* TITLE */
 #section-title{
-    font-size: 13.5pt;
     padding-top:20px;
 }
 #section-stadium{
     padding-top:5px;
-    font-size:8.5pt;
     color:#737373;
 }
 #section-stadium img{
@@ -78,17 +76,12 @@
     display: flex;
     justify-content: flex-start;
 }
-.section-time-left div.ubutu-light-font{
-    color:#56ab0a;
-    font-size: 26.5pt;
+.section-time-left span.ubutu-light-font{
     padding-right: 8px;
 }
 
 .section-time-left{
     display: flex;
-}
-.section-time-right{
-    font-size: 8.5pt;
 }
 .section-time-right .info{
     padding-top:10px;
@@ -103,14 +96,13 @@
 }
 .section-time-right .info #time{
     padding-left: 10px;
-    color:#56ab0a;
 }
 
 /* BELOW */
 .section-form-below{
     display: flex;
 }
-/* RIGHT */
+/* LEFT */
 .section-form-below-left{
     display: flex;
     width: 145px;
@@ -136,7 +128,6 @@ div.section-form-below-left span#haonguyen img{
 }
 div.section-form-below-left span#haonguyenname{
     padding-left: 8px;
-    font-size: 8.5pt;
     padding-top: 8px;
 }
 
@@ -151,18 +142,9 @@ img#people{
     padding: 12px 8px 12px 11px;
     inline-size: 34px;
 }
-div#players{
-    font-size: 8.5pt;
-    color:#56ab0a;
-}
-/* RIGHT */
-.section-form-below-right{
-    
-}
 
 /* BUTTON */
 .section-button{
-    font-size: 8.5pt;
     border-radius: 0px;
     padding-left: 23px;
     background: #56ab0a url(img/join.png) no-repeat left center;
@@ -174,12 +156,12 @@ div#players{
  }
 
  .section-button:hover{ 
-    cursor: pointer; 
-    outline: 4px auto #56ab0a;
+    cursor: pointer;
+    outline: none;
  }
  button.section-button:focus{
-    cursor: pointer; 
-    outline: 4px auto #56ab0a;
+    cursor: pointer;
+    outline: none;
 }
 
 /* LOADING */
@@ -189,10 +171,11 @@ div#players{
     text-align: center;
 }
 .section-loading span{
-    font-size: 8.5pt;
     color:#2b2b2b;
 }
 .section-loading img{
     inline-size: 16px;
     margin-right: 10px;
 }
+
+

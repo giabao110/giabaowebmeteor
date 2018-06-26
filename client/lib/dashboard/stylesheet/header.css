@@ -7,16 +7,9 @@
     padding:0 0; 
     line-height: 0;
 }
-
 .box{
     display: flex;
     align-items: flex-end;
-}
-
-/* MATCH */
-div.header-title{
-    font-size: 31.5pt;
-    
 }
  /* SEARCH*/
  input.header-change-input{
@@ -24,7 +17,6 @@ div.header-title{
     width: 224px;
     height: 23px;
     padding: 10px 0 10px 29px;
-    font-size: 7.5pt;
     color:  #737373;
     background-color: #232323 ;
     background-clip: padding-box;
@@ -48,7 +40,6 @@ select.header-border{
     border-style: none;
     border-radius: 0px;
     line-height: 2;
-    font-size: 8.5pt;
     border-bottom: 1px solid #b8b8b8;
     background: #ffffff url(img/topbar/dropdown.png) no-repeat right center;
     background-size: 8px;
@@ -78,8 +69,7 @@ select#dx{
  }
 
  /* BUTTON */
- button.header-button{
-    font-size: 10.5pt; 
+ button.header-button{ 
     border-radius: 0px;
     padding-left: 40px;
     background: #56ab0a url(img/header/quickmatch.png) no-repeat left center;

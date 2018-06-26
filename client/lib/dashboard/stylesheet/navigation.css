@@ -14,11 +14,6 @@ div.navbar-wrap {
 }
 
 /* LOGO */
-.logo-color{
-    color:#56ab09;
-    font-size: 14.5pt;
-}
-
 .logo-brand{
     vertical-align: middle;
     border-style: none;
@@ -40,7 +35,6 @@ input.nav-change-input {
     width: 224px;
     height: 23px;
     padding: 10px 0 10px 29px;
-    font-size: 7.5pt;
     color:  #ebebeb;
     background-color: #232323;
     background-clip: padding-box;
@@ -77,7 +71,6 @@ nav li.nav-item{
 
  nav ul li a.button-padding.nav-items.nav-link.text-uppercase{
      color: #c9c9c9;
-     font-size: 7.5pt;
  }
 
  nav ul li a:hover{

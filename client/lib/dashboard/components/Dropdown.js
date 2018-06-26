@@ -92,7 +92,7 @@ class Dropdown extends React.Component {
   }
 
   handleDocumentClick (event) {
-    console.log('Dai Le ----', event);
+    console.log('-', event);
     if (this.mounted) {
       console.log(ReactDOM.findDOMNode(this));
       
@@ -126,10 +126,6 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.defaultProps = { baseClassName: 'dropdown' }
-/*******************
-*    How to use
-* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
-
 const options = [
   { 
     value: 'one', 
