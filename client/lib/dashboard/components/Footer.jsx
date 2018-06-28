@@ -4,33 +4,44 @@ import React from 'react';
 class Footer extends React.Component {
     render() {
       return (
-          <div>
-            <div>
-              <div className="football-wraper-left">
-                <div>
-                  <img className="footer-logo-brand" src="/img/topbar/logo.png" alt=""/>
-                  <span className="ubutu-bold-font font-large-36 green">Football</span>
-                  <span className="ubutu-bold-font font-large-36 green">Party</span>
-                </div>
-                <nav className="footer-wraper-left-nav ubutu-medium-font font-small">
-                  <ul>
-                    <li id="Dow">Download App</li>
-                    <li id="Dow">F.A.Q</li>
-                    <li id="Dow">Support</li>
-                    <li id="Dow">Feedback</li>
+          <footer className="footer__">
+            <div className="footer__wraper">
+              <div className="footer__wraper-left gr">
+                <a className="footer__wraper-left-logo" href="">
+                  <img className="footer__wraper-left-logoimg" src="/img/topbar/logo.png" alt=""/>
+                </a>
+                  <a className="gr footer__wraper-left-brand bold f_36" href="">FootballParty</a>
+                <nav>
+                  <ul className="footer__wraper-left-ul medium f_24">
+                    <li className="footer__wraper-left-li">
+                      <a className="g_4 footer__wraper-left-a" href="">Download App</a>
+                    </li>
+                    <li className="footer__wraper-left-li">
+                      <a className="g_4 footer__wraper-left-a" href="">F.A.Q</a>
+                    </li>
+                    <li className="footer__wraper-left-li">
+                      <a className="g_4 footer__wraper-left-a" href="">Support</a>
+                    </li>
+                    <li className="footer__wraper-left-li">
+                      <a className="g_4 footer__wraper-left-a" href="">Feedback</a>
+                    </li>
                   </ul>
                 </nav>
               </div>
-              <div className="football-wraper-right">
-                <div className="social">
-                  <div className="fb"><img src="img/fooder/fb.png" alt=""/></div>
-                  <div className="twi"><img src="img/fooder/twi.png" alt=""/></div>
-                  <div className="insta"><img src="img/fooder/insta.png" alt=""/></div>
-                </div>
+              <div className="footer__wraper-right">                 
+                <a className="footer__wraper-rightdiv" href="">
+                  <img className="footer__wraper-rightdiv-img" src="img/fooder/fb.png" alt=""/>
+                </a>
+                <a className="footer__wraper-rightdiv" href="">
+                  <img className="footer__wraper-rightdiv-img" src="img/fooder/twi.png" alt=""/>
+                </a>
+                <a className="footer__wraper-rightdiv" href="">
+                  <img className="footer__wraper-rightdiv-img" src="img/fooder/insta.png" alt=""/>
+                </a>
               </div>
             </div>
-            <span className="ubutu-medium-font copyright font-small">©2017 Zigvy Inc.</span>
-          </div>
+            <p className="footer__wraper-copyright medium f_24 g_4">©2017 Zigvy Inc.</p>
+          </footer>
         );
     }
 }

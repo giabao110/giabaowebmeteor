@@ -11,40 +11,31 @@ import Barcelona from './tab/Barcelona';
 class Section extends React.Component {
     render() {
       return (
-        <div className="section-div">
-          <div className="section-div-row">
-            <div className="section-form-wraper">
+        <section className="section__div">
+          <div className="section__div-row">
               <SaintFC/>
-            </div>
-            <div className="section-form-wraper">
-              <HanoiACB/>
-            </div>
+
+              <SaintFC/>
           </div>
 
-          <div className="section-div-row">
-            <div className="section-form-wraper">
-                <Arsenal/>
-            </div>
-            <div className="section-form-wraper">
-                <Bayern/>
-            </div>
+          <div className="section__div-row">
+              <SaintFC/>
+
+              <SaintFC/>
           </div>
 
-          <div className="section-div-row">
-            <div className="section-form-wraper">
-              <Madrid/>
-            </div>
-            <div className="section-form-wraper">
-              <Barcelona/>
-            </div>
+          <div className="section__div-row">
+              <SaintFC/>
+
+              <SaintFC/>
           </div>
-            <div className="section-loading font-small">
+            <div className="section-loading f_24">
               <div>
                 <img src="img/loading.png" alt=""/>
-                <span className="ubutu-italic-font">Loading more ...</span>
+                <span className="italic">Loading more ...</span>
               </div>
             </div>
-		  	</div>
+		  	</section>
 			);
 		}
 	}

@@ -6,108 +6,112 @@ class Matchrequest extends React.Component {
       return (
         <div className="section-modal modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 					<div className="modal-dialog" role="document">
-						<div className="modal-custom modal-content">
-								<div className="modal-content-title">
-								<div className="ubutu-medium-font ">Upcoming Match</div>
-								<div className="modal-content-title-right ubutu-regular-font font-small">
-								<div id="celendar">
-										<button className="modal-button-social">
-										<img src="img/matchrequest/forma.png" alt=""/>
-										<span>Add to Calendar</span>
-										</button>  
-										</div>
-										<div id="share">
-										<button className="modal-button-social">  
-												<img src="img/matchrequest/formb.png" alt=""/>
-												<span>Share</span>
-										</button>
-										</div>
-								</div> 
-								</div>
-
-								<div className="modal-content-match">
-								<div className="modal-content-match-team1"> 
-										<img id="logo" src="img/bayernmuchen/avt.png" alt=""/>
-										<div className="ubutu-regular-font" id="name">
-											Bayern Muchen 
-										</div>
-										<div id="rate">
-											<img src="img/saintlouisfc/rate.png" alt=""/>
-										</div>
-										<div className="ubutu-regular-font font-small" id="king1">
-											<img id="king1" src="img/saintlouisfc/king.png" alt=""/>
-											<img id ="user1" src="img/topbar/avt-user2.png" alt=""/>
-											<span>Philipp Lahm</span>
-										</div>
-										<div className="ubutu-regular-font match-people1 font-small" >
-											<img src="img/people.png" alt=""/>
-											<span>8 Players</span>
-										</div>
-								</div>
-								<div className="ubutu-bold-font match-vs">vs</div>
-										<div className="modal-content-match-team2"> 
-												<img id="logo" src="img/zigvylogo/zigvy.png" alt=""/>
-												<div className="ubutu-regular-font" id="name">
-														Zigvy Soccer Club
-												</div>
-												<div id="rate2">
-														<img src="img/saintlouisfc/rate.png" alt=""/>
-												</div>
-												<div className="ubutu-regular-font font-small" id="king2">
-														<img id="king2" src="img/saintlouisfc/king.png" alt=""/>
-														<img id ="user2" src="img/topbar/avt-user.png" alt=""/>
-														<span>Peter Parker <span className="font-small" id="user3">(You)</span></span>
-												</div>
-												<div className="ubutu-regular-font match-people2 font-small" >
-														<img src="img/people.png" alt=""/>
-														<span>8 Players</span>
-												</div>
-										</div>
-								</div>
+						<div className="join__cus modal-content">
+              <div className="join__cont-title">
+                <div className="medium f_40">Upcoming Match</div>
+                <div className="join__contright regular f_24">
+                  <button className="join__contright-celendar">
+                    <a className="join__contright-celen" href="">Add to Calendar</a>
+                  </button>  
+                  <button className="join__contright-share">
+                  <div className="join__contright-shareimg">  
+                    <img className="join__contright-shareimgg" src="img/matchrequest/formb.png" alt=""/>
+                    </div>
+                    <p>Share</p>
+                  </button>
+                </div> 
+              </div>
+              <div className="join__body">
+								<div className="join__match">
+                  <div className="join__team1"> 
+                    <div className="join__team1-logo">
+                      <img className="join__team1-logoimg" src="img/bayernmuchen/avt.png" alt=""/>
+                    </div>
+                    <span className="join__team1-name regular f_42" >
+                    Bayern Muchen
+                    </span>
+                    <span className="join__team1-rate">
+                      <img className="join__team1-rateimg" src="img/saintlouisfc/rate.png" alt=""/>
+                    </span >
+                      <div className="join__team1-star regular f_24">
+                        <div className="join__team1-starking">
+                          <img className="join__team1-starkingimg" src="img/saintlouisfc/king.png" alt=""/>
+                        </div>
+                        <div className="join__team1-starpeople">
+                          <img className="join__team1-starpeopleimg" src="img/topbar/avt-user2.png" alt=""/>
+                        </div>
+                        <span>Philipp Lahm</span>
+                      </div>
+                      <div className="join__team1-player regular f_24 gr" >
+                        <div className="join__team1-playerlogo">
+                          <img className="join__team1-playerlogoimg" src="img/people.png" alt=""/>
+                        </div>
+                        <span className="">8 Players</span>
+                      </div>
+                  </div>
+								<div className="bold match-vs f_48">vs</div>
+                  <div className="join__team2"> 
+                    <div className="join__team1-logo">
+                      <img className="join__team2-logoimg" src="img/zigvylogo/zigvy.png" alt=""/>
+                    </div>
+                    <span className="join__team1-name regular f_42" >
+                      Zigvy Soccer Club
+                    </span>
+                    <span className="join__team1-rate">
+                      <img className="join__team1-rateimg" src="img/saintlouisfc/rate.png" alt=""/>
+                    </span >
+                      <div className="join__team1-star regular f_24">
+                        <div className="join__team1-starking">
+                          <img className="join__team1-starkingimg" src="img/saintlouisfc/king.png" alt=""/>
+                        </div>
+                        <div className="join__team1-starpeople">
+                          <img className="join__team1-starpeopleimg" src="img/topbar/avt-user.png" alt=""/>
+                        </div>
+                        <span>Peter Parker<span className="g_4">( You )</span></span>
+                      </div>
+                      <div className="join__team1-player regular f_24 gr" >
+                        <div className="join__team1-playerlogo">
+                          <img className="join__team1-playerlogoimg" src="img/people.png" alt=""/>
+                        </div>
+                        <span className="">8 Players</span>
+                      </div>
+                  </div>
+                </div>
 								<div className="modal-content-match">
 									<div className="modal-location">
 										<div className="modal-location-left">
 											<img src="img/modal-matchrequest/location.jpg" alt=""/>
 										</div>
 										<div className="modal-location-right">
-											<div className="ubutu-light-font location-title">Old Trafford Stadium</div>
-											<div className="ubutu-light-font location-info font-small">Sir Matt Busby Way, Stretford, Manchester M16 0RA, UK</div>
+											<div className="light location-title">Old Trafford Stadium</div>
+											<div className="light location-info f_24">Sir Matt Busby Way, Stretford, Manchester M16 0RA, UK</div>
 											<div className="modal-location-right-time">
 													<div className="section-time-left">
-															<span className="ubutu-light-font green">10</span>
+															<span className="light gr">10</span>
 													</div>
-												<div className="ubutu-regular-font section-time-right font-small">
-													<div className="info">
-														<div id="day">
-																<div>Monday</div>
-																<div>Oct 2017</div>
-														</div>
-														<div id="from">
-																<div>From:</div>
-																<div>To:</div>
-														</div>
-														<div id="time" className="green">
-																<div>08:00am</div>
-																<div>09:00am</div>
-														</div>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</div>
 								</div>
+              </div>
+
+
+
+
+
 								<div className="modal--footer">
 									<div className="modal--footer-left">
 										<div className="modal--footer-left-logo">
 											<img src="img/modal-matchrequest/mess-footer.jpg" alt=""/>
 										</div>
 										<div className="modal--footer-left-link">
-											<a className="ubutu-regular-font font-small green" href="">Message Bayern Muchen</a>
-											<span className="ubutu-regular-font font-small gray">0 Unread</span>
+											<a className="regular f_24 gr" href="">Message Bayern Muchen</a>
+											<span className="regular f_24 g_1">0 Unread</span>
 										</div>
 									</div>
 									<div>
-										<button type="button" className="modal-button ubutu-regular-font text-uppercase font-large">Send Request</button>
+										<button type="button" className="modal-button regular text-uppercase font-large">Send Request</button>
 									</div>
 								</div>
 							</div>

@@ -53,4 +53,4 @@ class SectionGrounds extends React.Component {
     }
   }
   
-	export default SectionGrounds;
+	export default SectionGrounds; 

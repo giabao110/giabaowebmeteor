@@ -1,181 +1,214 @@
 /* DIV */
-.section-div{
-    display: flex;
-    flex-direction: column;
+.section__div{
+  display: flex;
+  flex-direction: column;
 }
 
-.section-div-row{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 31px;
+.section__div-row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 31px;
 }
 
-.section-form-wraper{
-    width: 463px;
-    height: 159px;
-    border: 1px solid #dcdcdc;
-    position: relative;
+.section__form{
+  display: flex;
+  flex-direction: column;
+  width: 463px;
+  height: 159px;
+  border: 1px solid #dcdcdc;
+  position: relative;
+  display: block;
 }
 
-.section-form{
-    position: absolute;
-    display: flex;
-    flex-direction: column
-}
-
-.section-form-above{
-    display: flex;
-    position: relative;
-    height: 123px; 
-    border-bottom: 1px solid #dcdcdc;
-    justify-content: flex-start;
+.section__abv{
+  display: flex;
+  position: relative;
+  height: 123px; 
+  border-bottom: 0.5px solid #dcdcdc;
+  background: #fbfbfb;
+  overflow: hidden;
 }
 
 /*  ABOVE LEFT */
-.section-form-above-left{
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    flex: 0 0 auto;
+.section__abvleft{
+  display: block;
+  width: 125px;
+  position: relative;
+  padding: 20px 25px 30px;
 }
 
-#img-above-left1{
-    padding: 20px 24px 0 31px;
-    inline-size: 128px;
-
+.section__abvleftdiv{
+  width: 71px;
+  height: 71px;
+  display: block;
 }
 
-#img-above-left2{
-    padding: 7px 24px 7px 31px;
-    inline-size: 117px;
+.section__abv-leftimg{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin:auto;
+}
+
+.section__abv-leftrate{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 5px auto;
+  inline-size: 60px;
 }
 
 /* ABOVE RIGHT */
-.section-form-above-right{
-    width: 100%;
+.section__formabv-right{
+  width: 338px;
+  display: block;
+  line-height: 1;
 }
+
 /* TITLE */
-#section-title{
-    padding-top:20px;
+.section__title{
+  padding-top:20px;
 }
-#section-stadium{
-    padding-top:5px;
-    color:#737373;
+
+.section__stadium{
+  padding-top:10px;
+  color:#737373;
 }
-#section-stadium img{
-    vertical-align: middle;
-    inline-size: 25px;
-    padding-bottom: 2px;
-    padding-right: 5px;
+
+.section__stadiumimg{
+  vertical-align: middle;
+  inline-size: 25px;
+  padding-bottom: 6px;
+  padding-right: 5px;
 }
 
 /* TIME */
-.section-time{
-    display: flex;
-    justify-content: flex-start;
-}
-.section-time-left span.ubutu-light-font{
-    padding-right: 8px;
+.section__time{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top:2px;
+  line-height: 1.25;
 }
 
-.section-time-left{
-    display: flex;
+.section__time-day{
+  display: block;
+  margin-left:10px;
+  margin-right:23px;
 }
-.section-time-right .info{
-    padding-top:10px;
-    display: flex;
+
+.section__time-dayabv{
+  display: block;
 }
-.section-time-right .info #day{
-    width: 71px;
-    border-right: 1px solid #dcdcdc;
+.section__time-daybl{
+  display: block;
 }
-.section-time-right .info #from{
-    padding-left: 18px;
-}
-.section-time-right .info #time{
-    padding-left: 10px;
+
+.section__time-from{
+  display: block;
+  padding-left:23px;
+  padding-right:10px;
+  border-left: 0.5px solid #dcdcdc;
 }
 
 /* BELOW */
-.section-form-below{
-    display: flex;
+.section__bl{
+  display: flex;
+  height: 35px;
+  line-height: 1;
 }
 /* LEFT */
-.section-form-below-left{
-    display: flex;
-    width: 145px;
-    border-right: 1px solid #dcdcdc;
-    height: 35px;
-    overflow: hidden;
-}
-/* KING */
-div.section-form-below-left span#king{
-    padding-right: 8px;
-    padding-left: 12px;
-    padding-top: 3px;
-}
-div.section-form-below-left span#king img{
-    inline-size: 13px;
-}
-/* LOGOHAONGUYEN */
-div.section-form-below-left span#haonguyen{
-    padding-top: 3px;
-}
-div.section-form-below-left span#haonguyen img{
-    inline-size: 21px;
-}
-div.section-form-below-left span#haonguyenname{
-    padding-left: 8px;
-    padding-top: 8px;
+.section__blleft{
+  display: flex;
+  border-right: 0.5px solid #dcdcdc;
+  width: 144px;
+  align-items: center;
 }
 
-/* CENTER */
-.section-form-below-center{
-    display: flex;
-    align-items: center;
-     width: 240px;
+.section__blleft-logo{
+  width: 10px;
+  height: 10px;
+  margin: auto 8px auto 10px;
+  display: block;
 }
 
-img#people{
-    padding: 12px 8px 12px 11px;
-    inline-size: 34px;
+.section__blleft-logoimg{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.section__blleft-user{
+  width: 20px;
+  height: 20px;
+  margin: auto 9px auto 0;
+
+}
+
+.section__blleft-userimg{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+
+/* RIGHT */
+.section__blright{
+  display: flex;
+  align-items: center;
+  width: 273px;
+}
+
+.section__blrightlg{
+  width: 16px;
+  height:12px;
+  margin-left:11px;
+  margin-right:8px;
+}
+
+.section__blrightlg-img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 /* BUTTON */
-.section-button{
-    border-radius: 0px;
-    padding-left: 23px;
-    background: #56ab0a url(img/join.png) no-repeat left center;
-    background-size: 9px;
-    background-position-x: 16px;
-    color: #fff;
-    width: 81px;
-    height: 35px;
- }
 
- .section-button:hover{ 
-    cursor: pointer;
-    outline: none;
- }
- button.section-button:focus{
-    cursor: pointer;
-    outline: none;
+.section__blbtn{
+  border-radius: 0px;
+  padding-left: 22px;
+  background: #56ab0a url(img/join.png) no-repeat left center;
+  background-size: 9px;
+  background-position-x: 13px;
+  background-position-y: 11px;
+  color: #fff;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  border: none;
+  width: 80px;
+  height: 34px;
+  display: block;
+}
+
+.section__blbtn:hover{ 
+  cursor: pointer;
+  outline: none;
+}
+.section__blbtn:focus{
+  cursor: pointer;
+  outline: none;
 }
 
 /* LOADING */
 .section-loading{
-    margin-top:55px;
-    margin-bottom:91px;
-    text-align: center;
+  margin-top:55px;
+  margin-bottom:91px;
+  text-align: center;
 }
-.section-loading span{
-    color:#2b2b2b;
-}
+
 .section-loading img{
-    inline-size: 16px;
-    margin-right: 10px;
+  inline-size: 16px;
+  margin-right: 10px;
 }
 
 
