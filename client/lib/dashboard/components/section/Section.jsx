@@ -15,25 +15,23 @@ class Section extends React.Component {
           <div className="section__div-row">
               <SaintFC/>
 
-              <SaintFC/>
+              
           </div>
 
           <div className="section__div-row">
-              <SaintFC/>
+             
 
-              <SaintFC/>
+              
           </div>
 
           <div className="section__div-row">
-              <SaintFC/>
+             
 
-              <SaintFC/>
+              
           </div>
-            <div className="section-loading f_24">
-              <div>
-                <img src="img/loading.png" alt=""/>
-                <span className="italic">Loading more ...</span>
-              </div>
+            <div className="section-loading">
+                <span className="icon-loanding"></span>
+                <span className="italic f_24">Loading more ...</span>
             </div>
 		  	</section>
 			);

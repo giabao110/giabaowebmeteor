@@ -1,123 +1,90 @@
-/* MODAL */
-.section-modal.modal.fade .modal-dialog{
-  transition: transform .2s ease-out,-webkit-transform .2s ease-out;
-  max-width: 615px;
-  margin: 136px auto;
-}
-
+/* JOIN */
 .join__body{
-  margin: 0px 42px 33px 42px;
+  margin: 0px 42px 40px 42px;
 }
 
 /* TITLE */
-.join__cus.modal-content{
+.join__{
   border:none;
   border-radius:0;
 }
-.join__cont-title{
+.join__title{
   display: flex;
   justify-content: space-between;
   margin: 34px 34px 0 42px;
   align-items: center;
 }
 
-.join__contright{
+.join__right{
   display: flex;
 }
-.join__contright-share{
-  display: flex;  
+.join__right-share{
   width: 83px;
   height: 33px;
-  border: 1px solid #dcdcdc;
-}
-
-.join__contright-share:hover{
-  outline: none;
-  cursor: pointer;
-}
-
-.join__contright-share:focus{
-  outline: none;
-  cursor: pointer;
-}
-
-.join__contright-celendar{
-  display: flex;  
-  align-items: center;
-  width: 142px;
-  height: 33px;
-  border-top: 1px solid #dcdcdc;
-  border-left: 1px solid #dcdcdc;
-  border-bottom: 1px solid #dcdcdc;
-}
-
-.join__contright-celen{
+  border: 0.5px solid #dcdcdc;
   margin:auto;
 }
 
-.join__contright-celendar:hover{
+.join__right-share:hover{
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color:#56ab0a;
+}
+
+.join__right-share:focus{
+  outline: none;
+  cursor: pointer;
+}
+.join__right-celendar{
+  width: 142px;
+  height: 33px;
+  border-top: 0.5px solid #dcdcdc;
+  border-bottom: 0.5px solid #dcdcdc;
+  border-left: 0.5px solid #dcdcdc;
+}
+
+.join__right-celendar:hover{
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color:#56ab0a;
+}
+
+.join__right-celendar:focus{
   outline: none;
   cursor: pointer;
 }
 
-.join__contright-celendar:focus{
+.join__right-{
+  margin:auto;
+  padding-left: 10px;
+}
+
+.join__right-:hover{
   outline: none;
   cursor: pointer;
+  text-decoration: none;
+  color:#56ab0a;
 }
-
-.join__contright-celendarimg{
-  width: 10px;
-  height: 19px;
-  margin: 0px 10px 0px 8px;
-  display: block;
-}
-
-.join__contright-celendarimgg{
-  max-width: 100%;
-  max-height:100%;
-  margin: auto;
-}
-
-.join__contright-shareimg{
-  width: 10px;
-  height: 19px;
-  margin: 0px 10px 0px 8px;
-  display: block;
-}
-
-.join__contright-shareimgg{
-  max-width: 100%;
-  max-height:100%;  
-}
-
 
 /* MATCH */
 .join__match{
   display: flex;
   align-items: center;
-  margin:43px 48px 33px 48px;
+  margin:42px 50px 31px 50px;
 }
 
-
 div.match-vs{
-  margin: 0px 35px 100px 35px;
+  margin: 0px 33px 100px 33px;
   color:#2b2b2b;
 }
 
-
-
-
 /* TEAM1 */
 .join__team1{
-  justify-content: flex-end;
-  width: 167px;
-  height: auto;
-}
 
-.join__team2{
-  justify-content: flex-star;
-  width: 167px;
-  height: auto;
+  width: 169px;
+  max-height: auto;
 }
 
 .join__team1-logo{
@@ -146,6 +113,7 @@ div.match-vs{
   margin: 0 auto;
   padding-top:13px;
   word-wrap: break-word;
+  text-align: center;
 }
 
 /* RATE1 */
@@ -186,8 +154,7 @@ div.match-vs{
 .join__team1-starpeople{
   height: 20px;
   width: 20px;
-  margin-left: 10px;
-  margin-right: 9px;
+  margin: 0 9px;
 }
 
 .join__team1-starpeopleimg{
@@ -195,119 +162,106 @@ div.match-vs{
   max-width: 100%;
   margin: auto 0;
 }
+
+.join__team1-starpeoplee{
+  margin-left:6px; 
+}
+
 /* PEOPLE1 */
 .join__team1-player{
   display: flex;
   align-items: center;
   line-height: 1;
-  height: 12px;
 }
 
-.join__team1-playerlogo{
-  width:15px;
-  height: 12px;
-  margin-left:9px;
-  margin-right:9px;
-  display: block;
+.join__team1-playerr{
+  margin: 0 9px;
 }
-
-.join__team1-playerlogoimg{
-  max-height: 100%;
-  max-width: 100%;
-  margin: auto;
-}
-
-
 
 /* LOCATION */
-.modal-location{
-  border: 1px solid #dcdcdc;
+.join__location{
+  border: 0.5px solid #dcdcdc;
   height: 123px;
   background-color: #fbfbfb;
   display: flex;
   justify-content: flex-start;
 }
-.modal-location div img{
-  margin: auto;
-  inline-size: 110%;
-  padding: 23px 31px;
-}
 
 /* LEFT */
-.modal-location-left{
-  width: 126px;
+.join__ocation-left{
+  width: 125px;
+  display: block;
+}
+
+.join__locationimg{
+  width: 81px;
+  height: 81px;
+  margin:20px 20px 22px 24px;
+}
+
+.join__locationimgg{
+  max-width: 100%;
+  min-width: 100%;
+  display: block;
 }
 
 /* RIGHT */
-.modal-location-right{
-  padding-top:22px;
+.join__location-right{
+  padding-top:20px;
   display: flex;
   flex-direction: column;
-  margin-left: 8px;
+  line-height: 1;
 }
-.location-title{
-  font-size:11.5pt;
-  color:#56ab0a;
-}
-.location-info{
-  color:#737373;
-}
-.modal-location-right-time{
-  display: flex;
-  align-items: center;
-  margin-bottom: 18px;
-  
-}
-.modal-location-right-time .ubutu-regular-font.section-time-right .info{
-  padding-top:2px;
+
+.join__location-righttitle{
+  margin-bottom: 10px;
 }
 
 /* FOOTER */
-.modal--footer{
-  margin-top: 9px;
+.join__footer{
   display: flex;
   justify-content: space-between;
   height:121px;
+  align-items: center;
   background: #fbfbfb;
-  padding: 0 43px;
+  padding: 35px 42px;
 }
 /* FOOTER LEFT */
-.modal--footer-left{
+.join__footer-left{
   display: flex;
-  align-items: flex-start;
-  margin-top: 43px;
-}
-.modal--footer-left-link{
-  display: flex;
-  flex-direction: column;
-}
-.modal--footer-left-link a{
-  text-decoration: underline;
-  padding-bottom: 8px;
-}
-.modal--footer-left-logo img{
-  inline-size: 30px;
-}
-.modal--footer-left-logo{
-  margin-right:16px;
+  align-items: center;
 }
 
+.join__footer-link{
+  line-height: 1;
+}
 
-/* FOOTER LEFT BUTTON */
-.modal-button{
+.join__footer-link a:hover{
+  color:#56ab0a;
+  text-decoration:none;
+}
+
+.join__footer-left a:hover{
+  color:#56ab0a;
+  text-decoration:none;
+}
+
+.join__footer-left .icon-messenger::before{
+  font-size:28px;
+  margin-right: 15px;
+}
+
+.join__button{
   border-radius: 0px;
-  background-color: #56ab0a;
-  color:#fff;
+  background: #56ab0a;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
   width: 156px;
-  height: 52px;
-  margin-top: 34px;
+  height: 51px;
+  cursor: pointer;
 }
 
-.modal-button:hover{ 
-  cursor: pointer;
-  outline: none;
-}
-button.modal-button:focus{
-  cursor: pointer;
+.join__button:focus{
   outline: none;
 }
