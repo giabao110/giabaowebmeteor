@@ -1,6 +1,6 @@
 /* JOIN */
 .join__body{
-  margin: 0px 42px 40px 42px;
+  margin: 0px 43px 40px 43px;
 }
 
 /* TITLE */
@@ -22,7 +22,6 @@
   width: 83px;
   height: 33px;
   border: 0.5px solid #dcdcdc;
-  margin:auto;
 }
 
 .join__right-share:hover{

@@ -10,7 +10,7 @@ class Grounds extends Component {
 		return(
 			<div>
 				<div><Navigation/></div>
-				<div className="football-wraper">
+				<div  className="football__wraper">
 				<Headergrounds/>
 				<SectionGrounds/>
 				<Footer/>

@@ -12,28 +12,23 @@ class Section extends React.Component {
     render() {
       return (
         <section className="section__div">
-          <div className="section__div-row">
-              <SaintFC/>
-
-              
-          </div>
-
-          <div className="section__div-row">
-             
-
-              
-          </div>
-
-          <div className="section__div-row">
-             
-
-              
-          </div>
-            <div className="section-loading">
-                <span className="icon-loanding"></span>
-                <span className="italic f_24">Loading more ...</span>
-            </div>
-		  	</section>
+        <div className="section__div-row">
+           <SaintFC/>
+           <HanoiACB/>
+        </div>
+        <div className="section__div-row">
+           <Arsenal/>
+           <Bayern/>
+        </div>
+        <div className="section__div-row">
+           <Madrid/>
+           <Barcelona/>
+        </div>
+        <div className="section-loading">
+           <span className="icon-loanding"></span>
+           <span className="italic f_24">Loading more ...</span>
+        </div>
+     </section>
 			);
 		}
 	}

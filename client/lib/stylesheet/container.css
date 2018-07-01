@@ -60,7 +60,11 @@ table {
   color:#2b2b2b;
 }
 
-body p{
+body p, ul, label{
+  margin-bottom: 0;
+}
+
+body ul{
   margin-bottom: 0;
 }
 
@@ -68,9 +72,6 @@ body p{
   text-decoration:none;
 }
 
-.football__wraper ul{
-  margin-bottom: 0;
-}
 
 .football__wraper img{
   vertical-align: baseline;
@@ -142,6 +143,9 @@ body p{
 .gr{
 	color:#56ab0a;
 }
+.wt{
+	color:#ffffff;
+}
 .gray{
 	color:#909090;
 }
@@ -159,6 +163,15 @@ body p{
 }
 .g_5{
   color: #c9c9c9;
+}
+.g_6{
+  color: #737373;
+}
+.g_7{
+  color: #a7a7a7;
+}
+.g_8{
+  color: #888888;
 }
 
 
@@ -223,9 +236,11 @@ body p{
 .icon-logostick:before {
   content: "\e90d";
   color: #56ab0a;
+  font-size: 52px;
 }
 .icon-next:before {
   content: "\e90e";
+  color: #2b2b2b;
 }
 .icon-back:before {
   content: "\e913";
@@ -233,6 +248,7 @@ body p{
 .icon-plus:before {
   content: "\e90f";
   color: #56ab0a;
+  font-size:13px;
 }
 .icon-share:before {
   content: "\e910";
@@ -288,5 +304,6 @@ body p{
 .icon-twitter:before {
   content: "\ea96";
 }
-
-
+.icon-back2:before {
+  content: "\e913";
+}
