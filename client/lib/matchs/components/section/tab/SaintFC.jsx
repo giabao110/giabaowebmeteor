@@ -10,12 +10,12 @@ class SaintFC extends React.Component {
            <div className="section__abv">
               <div className="section__abvleft">
                  <div className="section__abvleftdiv">
-                    <img className="section__abv-leftimg" src="img/dashboard/saintlouisfc/logo.png" alt="" />
+                    <img className="section__abv-leftimg" src={this.props.img} alt="" />
                  </div>
                  <img className="section__abv-leftrate" src="img/dashboard/saintlouisfc/rate.png" alt=""/>
               </div>
               <div className="section__formabv-right">
-                 <p className="section__title regular f_34">Saint Louis FC</p>
+                 <p className="section__title regular f_34">{`Saint Louis FC`}</p>
                  <p className="section__stadium regular f_24">
                     <span className="icon-logogrey section__stadiumimg"></span> Old Trafford Stadium
                  </p>

@@ -9,14 +9,14 @@ class Navigation extends React.Component {
               <nav className="nav__items">
                 <div>
                   <span className="icon-brand"></span>
-                  <a className="nav__logo-brand-name regular f_36" href="">Football<span className="bold">Party</span></a>
+                  <a className="nav__logo-brand-name regular f_36" href="/">Football<span className="bold">Party</span></a>
                 </div>
                 <form className="padding padding-search form-inline ">    
                   <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
                 </form> 
                 <ul className="nav__links medium f_22">     
                   <li><a href="/">Find Match</a></li>
-                  <li><a href="/">Grounds</a></li>
+                  <li><a href="/Grounds">Grounds</a></li>
                   <li><a href="/">Messages</a></li>
                   <li><a href="/">Upcoming </a></li>
                   <span className="regular f_20 ">2</span>

@@ -5,17 +5,24 @@
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "createdbLocal": "node ./imports/models/db/populatedb mongodb://127.0.0.1:3001/GroundFinder"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.51",
+    "async": "^2.6.1",
     "bootstrap": "^4.1.1",
     "jquery": "^3.3.1",
     "meteor-node-stubs": "^0.4.1",
+    "mongoose": "^5.2.2",
     "popper.js": "^1.12.9",
+    "rc-tabs": "^9.2.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-modal": "^3.4.5",
+    "react-mounter": "^1.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-slick": "^0.23.1",
     "slick-carousel": "^1.8.1",
     "webpack": "^4.12.0"

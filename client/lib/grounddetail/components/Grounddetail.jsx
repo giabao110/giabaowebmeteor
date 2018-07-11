@@ -1,6 +1,6 @@
 import React from 'react';
 import Step1 from './Step1';
-import Dashboard from '../../dashboard/dashboard';
+
 
 class Grounddetail extends React.Component {
     render() {

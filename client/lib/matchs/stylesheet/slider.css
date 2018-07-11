@@ -1,0 +1,50 @@
+
+/* SLIDER */
+div.rc-tabs-tab{
+  padding:11px 17px;
+  background:#ffffff;
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
+div.rc-tabs-top .rc-tabs-tab{
+  margin-right:16px;
+}
+
+div.rc-tabs-tab-active, .rc-tabs-tab-active:hover{
+  background: #56ab0a;
+  color: #fff;
+}
+
+div.rc-tabs-tab:hover{
+  color:#2b2b2b;
+}
+
+div.rc-tabs-top .rc-tabs-bar{
+  border-bottom:0px;
+}
+
+.sexy-line-cus{
+
+  position: relative;
+  margin: 1.5px 0;
+  height: 0.5px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
+}
+
+
+div.rc-tabs-ink-bar.rc-tabs-ink-bar-animated{
+  background: #fff url(img/grounds/groundshome/select.svg) no-repeat left center;
+  background-size: 10px;
+  background-position-x: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+div.rc-tabs-top {
+  border-bottom: none;
+}

@@ -8,12 +8,14 @@ import Bayern from './tab/Bayern';
 import Madrid from './tab/Madrid';
 import Barcelona from './tab/Barcelona';
 
+
 class Section extends React.Component {
     render() {
       return (
-        <section className="section__div">
+        <div className="section__div">
+          <hr className="sexy-line-cus" />
         <div className="section__div-row">
-           <SaintFC/>
+      <SaintFC img="img/dashboard/saintlouisfc/logo.png" />
            <HanoiACB/>
         </div>
         <div className="section__div-row">
@@ -28,7 +30,7 @@ class Section extends React.Component {
            <span className="icon-loanding"></span>
            <span className="italic f_24">Loading more ...</span>
         </div>
-     </section>
+     </div>
 			);
 		}
 	}

@@ -10,7 +10,7 @@ class Group1 extends React.Component {
           </div>
           <div className="sectionground-content">
               <div className="sectionground-content-title regular">
-                <span className="f_34">Old Trafford Stadium</span>
+                <a href="/Grounddetail" className="f_34">Old Trafford Stadium</a>
               </div>
               <div className="sectionground-content-info">
                 <span className="f_24 g_1">Sir Matt Busby Way, Stretford Manchester M16 0RA, UK</span>
