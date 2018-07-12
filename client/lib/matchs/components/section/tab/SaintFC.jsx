@@ -1,6 +1,7 @@
 import  React from 'react';
 import  '/node_modules/bootstrap';
 import	Modal from '../Modal';
+import  Rate from '../../../../components/Rating';
 
 class SaintFC extends React.Component {
     render() {
@@ -12,7 +13,8 @@ class SaintFC extends React.Component {
                  <div className="section__abvleftdiv">
                     <img className="section__abv-leftimg" src={this.props.img} alt="" />
                  </div>
-                 <img className="section__abv-leftrate" src="img/dashboard/saintlouisfc/rate.png" alt=""/>
+                 <span className="section__abv-leftrate"> <Rate rate={3}/>  </span>
+                 
               </div>
               <div className="section__formabv-right">
                  <p className="section__title regular f_34">{`Saint Louis FC`}</p>

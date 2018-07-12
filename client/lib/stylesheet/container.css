@@ -262,10 +262,7 @@ body ul{
   content: "\e900";
   color: #a5a5a5;
 }
-.icon-people:before {
-  content: "\e901";
-  color: #a5a5a5;
-}
+
 .icon-rate0:before {
   content: "\e902";
   color: #e7e7e7;
@@ -306,4 +303,21 @@ body ul{
 }
 .icon-back2:before {
   content: "\e913";
+}
+.icon-star-half:before {
+  content: "\e914";
+}
+.icon-star:before {
+  content: "\e901";
+  color:#e9e9e9;
+  font-size: 11.5px;
+  text-align: center;
+  margin-right:1px;
+}
+.icon-star2:before {
+  content: "\e901";
+  color:#56ab0a;
+  font-size: 11.5px;
+  text-align: center;
+  margin-right:1px;
 }

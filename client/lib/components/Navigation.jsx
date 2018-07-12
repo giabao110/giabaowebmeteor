@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class Navigation extends React.Component {
     render() {
@@ -14,8 +15,8 @@ class Navigation extends React.Component {
                 <form className="padding padding-search form-inline ">    
                   <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
                 </form> 
-                <ul className="nav__links medium f_22">     
-                  <li><a href="/">Find Match</a></li>
+                <ul className="nav__links medium f_22"> 
+                  <li><Link to="/">Find Match</Link></li>
                   <li><a href="/Grounds">Grounds</a></li>
                   <li><a href="/">Messages</a></li>
                   <li><a href="/">Upcoming </a></li>
