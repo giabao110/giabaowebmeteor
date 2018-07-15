@@ -6,14 +6,15 @@ import Header from './components/Header';
 import Slider from './components/section/Slider';
 import Section from './components/section/Section';
 
+
 class Home extends Component {
 	render (){
 		return(
 			<div>
-        <Navigation/>
+        <Navigation count={this.props.incompleteCount}/>
           <div className="football__wraper">
-            <Header/>
-            <Slider/>
+           
+            <Section/>
             <Footer/>
           </div>
 			</div>

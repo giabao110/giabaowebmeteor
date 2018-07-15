@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -24,7 +23,7 @@ Modal.defaultStyles.overlay.backgroundColor = 'rgb(0, 0, 0, 0.7)';
 Modal.setAppElement('body');
 
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -84,9 +83,9 @@ class App extends React.Component {
             <div className="join__match">
                <div className="join__team1">
                   <div className="join__team1-logo">
-                     <img className="join__team1-logoimg" src="img/dashboard/bayernmuchen/avt.png" alt=""/>
+                     <img className="join__team1-logoimg" src={this.props.avatar} alt=""/>
                   </div>
-                  <span className="join__team1-name regular f_42" >Bayern Muchen</span>
+                  <span className="join__team1-name regular f_42" >{this.props.name}</span>
                   <span className="join__team1-rate">
                   <img className="join__team1-rateimg" src="img/dashboard/saintlouisfc/rate.png" alt=""/>
                   </span >
@@ -95,11 +94,11 @@ class App extends React.Component {
                      <span className="join__team1-starpeople">
                      <img className="join__team1-starpeopleimg" src="img/topbar/avt-user2.png" alt=""/>
                      </span>
-                     <span>Philipp Lahm</span>
+                     <span>{this.props.user}</span>
                   </div>
                   <div className="join__team1-player regular f_24 gr" >
                      <span className="icon-people"></span>
-                     <span className="join__team1-playerr">8 Players</span>
+                     <span className="join__team1-playerr">{this.props.player} Player</span>
                   </div>
                </div>
                <div className="bold match-vs f_48">vs</div>
@@ -131,7 +130,7 @@ class App extends React.Component {
                   </div>
                </div>
                <div className="join__location-right">
-                  <p className="join__location-righttitle regular f_28 gr">Old Trafford Stadium</p>
+                  <p className="join__location-righttitle regular f_28 gr">{this.props.stadium}</p>
                   <p className="regular f_24 g_1">Sir Matt Busby Way, Stretford, Manchester M16 0RA, UK</p>
                   <div className="section__time">
                      <div className="section__time-number light f_60 gr">10</div>
@@ -170,4 +169,3 @@ class App extends React.Component {
   }
 }
 
-export default App;

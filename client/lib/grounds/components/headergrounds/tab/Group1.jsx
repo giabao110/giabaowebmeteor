@@ -6,7 +6,7 @@ class Group1 extends React.Component {
       return (
 				<div>
             <div className="sectionground-img">
-                <img src="./img/grounds/groundshome/group1/1.jpg" alt=""/>
+                <img src={this.props.image} alt=""/>
             </div>
             <div className="sectionground-content">
                 <div className="sectionground-content-title regular">

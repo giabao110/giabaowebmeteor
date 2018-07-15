@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { withTracker } from 'meteor/react-meteor-data';
+import { MatchsCol } from '../../../imports/api/matchs';
 
 class Navigation extends React.Component {
     render() {
@@ -20,7 +22,7 @@ class Navigation extends React.Component {
                   <li><a href="/Grounds">Grounds</a></li>
                   <li><a href="/">Messages</a></li>
                   <li><a href="/">Upcoming </a></li>
-                  <span className="regular f_20 ">2</span>
+                  <span className="regular f_20 ">{this.props.incompleteCount}</span>
                 </ul>
               </nav>
               <div className="nav__right">
@@ -42,4 +44,9 @@ class Navigation extends React.Component {
       );
     }
   } 
-  export default Navigation;
+  export default withTracker(() => {
+    return {
+      matchs: MatchsCol.find({}, { sort: { datecreated: -1 } }).fetch(),
+      incompleteCount: MatchsCol.find({ checked: { $eq: false } }).count(),
+    };
+  })(Navigation);

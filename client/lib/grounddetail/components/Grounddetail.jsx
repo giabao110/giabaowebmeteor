@@ -9,8 +9,8 @@ class Grounddetail extends React.Component {
       return (
         <div>
           <GroundInfo/>
-          <Info/>
-        <div className="headerground__layout">
+            <Info/>
+            <div className="headerground__layout">
           <Comments/>
           <History/>
         </div>

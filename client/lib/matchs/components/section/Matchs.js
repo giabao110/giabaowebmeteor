@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
+import  '/node_modules/bootstrap';
+import	Modal from './Modal';
+import  Rate from '../../../components/Rating';
+import { withTracker } from 'meteor/react-meteor-data';
+import { MatchsCol } from '../../../../../imports/api/matchs';
 
 
-class HanoiACB extends React.Component {
-	render() {
-		return (
-      <div >
-      <div action="" className="section__form">
+class Matchs extends Component { 
+  render() {
+    return ( 
+    <div className="section_div">
+      <div className="section__form">
          <div className="section__abv">
             <div className="section__abvleft">
                <div className="section__abvleftdiv">
-                  <img className="section__abv-leftimg" src="img/dashboard/arsenal/avt.png" alt="" />
+                  <img className="section__abv-leftimg" src={this.props.matchs.logo} alt="" />
                </div>
-               <img className="section__abv-leftrate" src="img/dashboard/saintlouisfc/rate.png" alt=""/>
+               <span className="section__abv-leftrate"> <Rate rate={this.props.matchs.rating}/></span>
+               
             </div>
             <div className="section__formabv-right">
-               <p className="section__title regular f_34">Saint Louis FC</p>
+               <p className="section__title regular f_34">{this.props.matchs.text}</p>
                <p className="section__stadium regular f_24">
-                  <span className="icon-logogrey section__stadiumimg"></span> Old Trafford Stadium
+                  <span className="icon-logogrey section__stadiumimg"></span> {this.props.matchs.stadium}
                </p>
                <div className="section__time">
                   <div className="section__time-number light f_60 gr">10</div>
@@ -41,18 +47,24 @@ class HanoiACB extends React.Component {
                <span className="section__blleft-user">
                <img className="section__blleft-userimg" src="img/dashboard/saintlouisfc/haonguyen.png" alt="" />
                </span>
-               <span className="regular f_24">Hao Nguyen</span>
+               <span className="regular f_24">{this.props.matchs.username}</span>
             </div>
             <div className="section__blright">
-               <span className="icon-people section__blrightlg"></span>
-               <span className="regular gr f_24">8 Players</span>
+               <img src="img/topbar/people.svg" className="section__blrightlg"></img>
+               <span className="regular gr f_24">{this.props.matchs.players} Players</span>
             </div>
-          
+            <Modal  
+              name={this.props.matchs.text} 
+              avatar={this.props.matchs.logo}
+              user={this.props.matchs.username}
+              player={this.props.matchs.players}
+              stadium={this.props.matchs.stadium}
+            />
          </div>
       </div>
-   </div>
-			);
-    }
+    </div>
+    );
+  }
 }
-  
-    export default HanoiACB;
+
+export default (Matchs);

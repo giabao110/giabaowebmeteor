@@ -1,38 +1,36 @@
-
-import React from 'react';
+import React, { Component } from 'react';
 import '/node_modules/bootstrap';
-import SaintFC from './tab/SaintFC';
-import HanoiACB from './tab/HanoiACB';
-import Arsenal from './tab/Arsenal';
-import Bayern from './tab/Bayern';
-import Madrid from './tab/Madrid';
-import Barcelona from './tab/Barcelona';
+import { withTracker } from 'meteor/react-meteor-data';
+import { MatchsCol } from '../../../../../imports/api/matchs';
+import Header from '../Header';
+
+import Matchs from './Matchs';
 
 
-class Section extends React.Component {
+class Section extends Component {
+    renderMatchs() {
+      return this.props.matchs.map((matchs) => (
+        <Matchs key={matchs._id} matchs={matchs} />
+      ));
+    }
     render() {
       return (
-        <div className="section__div">
-          <hr className="sexy-line-cus" />
+      <div>
+         <Header/>
         <div className="section__div-row">
-      <SaintFC img="img/dashboard/saintlouisfc/logo.png" />
-           <HanoiACB/>
-        </div>
-        <div className="section__div-row">
-           <Arsenal/>
-           <Bayern/>
-        </div>
-        <div className="section__div-row">
-           <Madrid/>
-           <Barcelona/>
+          {this.renderMatchs()}
         </div>
         <div className="section-loading">
-           <span className="icon-loanding"></span>
-           <span className="italic f_24">Loading more ...</span>
-        </div>
-     </div>
+          <span className="icon-loanding"></span>
+          <span className="italic f_24">Loading more...</span>
+        </div> 
+      </div>
 			);
 		}
 	}
 
-	export default Section;
+  export default withTracker(() => {
+    return {
+      matchs: MatchsCol.find({}, { sort: { datecreated: -1 } }).fetch(),
+    };
+  })(Section);

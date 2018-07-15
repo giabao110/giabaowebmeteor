@@ -6,41 +6,27 @@ import Group4 from './headergrounds/tab/Group4';
 import Group5 from './headergrounds/tab/Group5';
 import Group6 from './headergrounds/tab/Group6';
 
+import { withTracker } from 'meteor/react-meteor-data';
+import { GroundsCol } from '../../../../imports/api/grounds';
+
+import Grounds from './Grounds';
+
 
 class SectionGrounds extends React.Component {
+  renderGrounds() {
+    return this.props.grounds.map((grounds) => (
+      <Grounds key={grounds._id} grounds={grounds} />
+    ));
+  }
     render() {
       return (
           <div>
-            <div className="sectionground-div-column">
               <div className="sectionground-div-row">
                   {/* Group1 */}  
-                  <div className="sectionground-group">
-                    <Group1/>
-                  </div>
-                  {/* Group2 */}  
-                  <div className="sectionground-group">
-                    <Group2/>
-                  </div>
-                  {/* Group3 */}  
-                  <div className="sectionground-group">
-                    <Group3/>
-                  </div>
+                    {this.renderGrounds()}
+                    <div className="sectionground-groupwhile"></div>  
               </div>
-              <div className="sectionground-div-row">
-                  {/* Group4 */}  
-                  <div className="sectionground-group">
-                    <Group4/>
-                  </div>
-                  {/* Group5 */}  
-                  <div className="sectionground-group">
-                    <Group5/>
-                  </div>
-                  {/* Group6 */}  
-                  <div className="sectionground-group">
-                    <Group6/>
-                  </div>
-              </div>
-            </div>
+
           <div className="section-loading">
             <span className="icon-loanding"></span>
             <span className="italic f_24">Loading more ...</span>
@@ -50,4 +36,9 @@ class SectionGrounds extends React.Component {
     }
   }
   
-	export default SectionGrounds; 
+  export default withTracker(() => {
+    return {
+      grounds: GroundsCol.find({}, { sort: { createdAt: -1 } }).fetch(),
+    };
+  })(SectionGrounds);
+

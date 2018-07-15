@@ -1,6 +1,6 @@
 import 'rc-tabs/assets/index.css';
 import React from 'react';
-import Tabs, { TabPane } from 'rc-tabs';
+import Tabs, { TabPane } from 'rc-tabs/lib';
 import TabContent from 'rc-tabs/lib/SwipeableTabContent';
 import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
 import Section from './Section';
