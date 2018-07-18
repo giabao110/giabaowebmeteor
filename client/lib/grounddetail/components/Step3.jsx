@@ -11,7 +11,7 @@ const customStyles = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
     width                 : '695px',
-    height             : '636px',
+    height             : '646px',
     borderRadius          :0,
     padding: '0px'
   }
@@ -53,7 +53,7 @@ class App extends React.Component {
       <div>
       <button onClick={this.openModal} className="stp__3-btn regular f_28 wt">
       <span className="icon-next"></span>
-      <span className="stp__3-btntext"> FINISH</span>
+      <span className="stp__3-btntext"> FINISH </span>
       </button>
       <Modal
          isOpen={this.state.modalIsOpen}

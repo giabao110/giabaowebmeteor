@@ -11,6 +11,10 @@
   color: black;
 }
 
+.headerground__back a:hover{
+  text-decoration: none;
+}
+
 .headerground__back{
   width: 38px;
   height: 27px;
@@ -68,7 +72,7 @@
 }
 
 .info__right-title-s{
-  padding: 20px 145px 0 0;
+  padding: 20px 0 0 0;
   line-height: 1.5;
 }
 
@@ -203,6 +207,40 @@
   margin-bottom: 38px;
 }
 
+.headerground__comment_btn{
+  display: block;
+  padding: 0 14px;
+  text-align: center;
+  background-color: #56ab0a;
+  border: none;
+  cursor: pointer;
+  height: 24px;
+  width: 55px;
+  color: #fff;
+  margin-top:10px;
+  text-align: right;
+  float: right;
+}
+
+.headerground__comment_btn:active{
+  outline:none;
+}
+
+.headerground__comment_input{
+  border:0.5px solid #dcdcdc;
+  height:50px;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.headerground__comment_input:hover{
+  outline: none;
+}
+
+.headerground__comment_input::placeholder{
+  margin-left: 30px;
+}
+
 .headerground__comment-user{
   width: calc(100 * 38px);
   height: 38px;
@@ -222,10 +260,8 @@
   flex-direction: row;
 }
 
-.headerground__comment-name-img{
-  inline-size: 60px;
-  margin: auto auto auto 16px;
-  display: block;
+.headerground__rate{
+ margin-left:16px;
 }
 
 .headerground__comment-team{
@@ -241,6 +277,7 @@
 .headerground__comment-content{
   line-height: 1.75;
   padding-top: 10px;
+  text-align: justify;
 }
 
 
@@ -285,4 +322,12 @@
 
 .headerground__history-content-players{
   display: block;
+}
+
+.headerground__form input:focus{
+  outline: none;
+}
+
+.headerground__form button:focus{
+  outline: none;
 }

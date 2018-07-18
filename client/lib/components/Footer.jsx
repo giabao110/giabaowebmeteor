@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
 class Footer extends React.Component {
@@ -7,33 +8,33 @@ class Footer extends React.Component {
         <footer className="footer">
           <div className="footer__">
             <nav className="footer__left gr">
-              <a className="footer__left-logo" href=""><span className="icon-brand"></span></a>
-              <a className="footer__left-brand gr bold f_36" href="">FootballParty</a>
+              <Link to="/" className="footer__left-logo" href=""><span className="icon-brand"></span></Link>
+              <Link to="/" className="footer__left-brand gr bold f_36" href="">FootballParty</Link>
               <ul className="footer__left-ul medium f_24">
                 <li className="footer__left-li">
-                  <a className="g_4 footer__left-a" href="">Download App</a>
+                  <Link to="/" className="g_4 footer__left-a" href="">Download App</Link>
                 </li>
                 <li className="footer__left-li">
-                  <a className="g_4 footer__left-a" href="">F.A.Q</a>
+                  <Link to="/" className="g_4 footer__left-a" href="">F.A.Q</Link>
                 </li>
                 <li className="footer__left-li">
-                  <a className="g_4 footer__left-a" href="">Support</a>
+                  <Link to="/" className="g_4 footer__left-a" href="">Support</Link>
                 </li>
                 <li className="footer__left-li">
-                  <a className="g_4 footer__left-a" href="">Feedback</a>
+                  <Link to="/" className="g_4 footer__left-a" href="">Feedback</Link>
                 </li>
               </ul>
             </nav>
             <div className="footer__right">                 
-              <a className="footer__rightlogo g_4" href="">
+              <Link to="/" className="footer__rightlogo g_4" href="">
                 <span className="icon-facebook"></span>
-              </a>
-              <a className="footer__rightlogo g_4" href="">
+              </Link>
+              <Link to="/" className="footer__rightlogo g_4" href="">
                 <span className="icon-twitter"></span>
-              </a>
-              <a className="footer__rightlogo g_4" href="">
+              </Link>
+              <Link to="/" className="footer__rightlogo g_4" href="">
               <span className="icon-instagram"></span>
-              </a>
+              </Link>
             </div>
           </div>
           <p className="footer__copyright medium f_24 g_4">©2017 Zigvy Inc.</p>

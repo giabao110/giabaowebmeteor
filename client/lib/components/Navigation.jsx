@@ -6,22 +6,22 @@ import { MatchsCol } from '../../../imports/api/matchs';
 class Navigation extends React.Component {
     render() {
       return(
-        <header className="nav">
+        <div className="nav">
           <div className="football__wraper">
             <div className="nav__wrap">
               <nav className="nav__items">
                 <div>
                   <span className="icon-brand"></span>
-                  <a className="nav__logo-brand-name regular f_36" href="/">Football<span className="bold">Party</span></a>
+                  <Link to="/" className="nav__logo-brand-name regular f_36" href="/">Football<span className="bold">Party</span></Link>
                 </div>
                 <form className="padding padding-search form-inline ">    
                   <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
                 </form> 
                 <ul className="nav__links medium f_22"> 
                   <li><Link to="/">Find Match</Link></li>
-                  <li><a href="/Grounds">Grounds</a></li>
-                  <li><a href="/">Messages</a></li>
-                  <li><a href="/">Upcoming </a></li>
+                  <li><Link to="/Grounds">Grounds</Link></li>
+                  <li><Link to="/Grounds">Messages</Link></li>
+                  <li><Link to="/">Upcoming</Link></li>
                   <span className="regular f_20 ">{this.props.incompleteCount}</span>
                 </ul>
               </nav>
@@ -40,7 +40,8 @@ class Navigation extends React.Component {
               </div>
             </div>
           </div>
-        </header>
+          {this.props.children}
+        </div>
       );
     }
   } 

@@ -1,16 +1,8 @@
 import React from 'react';
-import Group1 from './headergrounds/tab/Group1';
-import Group2 from './headergrounds/tab/Group2';
-import Group3 from './headergrounds/tab/Group3';
-import Group4 from './headergrounds/tab/Group4';
-import Group5 from './headergrounds/tab/Group5';
-import Group6 from './headergrounds/tab/Group6';
-
 import { withTracker } from 'meteor/react-meteor-data';
 import { GroundsCol } from '../../../../imports/api/grounds';
 
 import Grounds from './Grounds';
-
 
 class SectionGrounds extends React.Component {
   renderGrounds() {
@@ -36,9 +28,10 @@ class SectionGrounds extends React.Component {
     }
   }
   
-  export default withTracker(() => {
+  export default withTracker((props) => {
+    // console.log(GroundsCol.find({_id: new Mongo.ObjectID(props.match.params.GroundID)}, { sort: { createdAt: -1 } }).fetch());
     return {
       grounds: GroundsCol.find({}, { sort: { createdAt: -1 } }).fetch(),
     };
-  })(SectionGrounds);
+  })(SectionGrounds) 
 

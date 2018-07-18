@@ -6,17 +6,48 @@ import Header from '../Header';
 
 import Matchs from './Matchs';
 
-
 class Section extends Component {
-    renderMatchs() {
-      return this.props.matchs.map((matchs) => (
-        <Matchs key={matchs._id} matchs={matchs} />
-      ));
+    constructor(props) {
+      super(props);
+      this.state = {
+        strSearch: '',
+        strSortRate: '',
+      };
+      this.handleSearch = this.handleSearch.bind(this);
+      this.handleSortRate = this.handleSortRate.bind(this);
     }
+
+    renderMatchs() {
+      console.log(this.state.strSortRate);
+      let matchs= this.props.matchs
+      console.log('strSearch: ',this.state.strSearch);
+      if(this.state.strSortRate.toString() !== '')
+        matchs = matchs.filter(match => match.rating.toString() === this.state.strSortRate);
+      
+      console.log('matchs1: ',matchs);
+      if(this.state.strSearch.toString() !== '')
+      matchs = matchs.filter(match => match.text.toLowerCase().includes(this.state.strSearch.toLowerCase()));
+     
+      console.log('matchs2: ',matchs);
+      return matchs.map((matchs) =><Matchs key={matchs._id} matchs={matchs}/>)
+    }
+
+    handleSearch(value){
+      this.setState({
+        strSearch: value
+      });
+    }
+
+    handleSortRate(value){
+      this.setState({
+        strSortRate: value
+      });
+    }
+    
     render() {
       return (
       <div>
-         <Header/>
+         <Header onClickSearchGo={this.handleSearch} onClickSortRate={this.handleSortRate}/>
         <div className="section__div-row">
           {this.renderMatchs()}
         </div>
@@ -31,6 +62,6 @@ class Section extends Component {
 
   export default withTracker(() => {
     return {
-      matchs: MatchsCol.find({}, { sort: { datecreated: -1 } }).fetch(),
+      matchs: MatchsCol.find({}, { sort: { createdAt: -1 } }).fetch(),
     };
   })(Section);

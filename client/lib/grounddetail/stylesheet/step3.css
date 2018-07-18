@@ -61,6 +61,14 @@
   background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
 }
 
+.sexy_linee { 
+  margin: 15px 0;
+  height: 0.5px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
+}
+
 /* SEARCH */
 .stp3__search{
   display: block;

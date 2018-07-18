@@ -8,14 +8,10 @@ import Headergrounds from '../grounds/components/headergrounds/Headergrounds';
 class Grounds extends Component {
 	render (){
 		return(
-			<div>
-        <Navigation/>
-          <div className="football__wraper">
+        <div>
             <Headergrounds/>
             <SectionGrounds/>
-            <Footer/>
-          </div>
-			</div>
+       </div>
 		);
 	}
 }

@@ -1,17 +1,16 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
+import { Link, withRouter } from "react-router-dom";
+import { withTracker } from 'meteor/react-meteor-data';
 
 class Grounds extends React.Component {
     render() {
       return (
         <div className="sectionground-group">
-            <Link to="/Grounddetail" className="sectionground-img">
+            <Link to={`/Grounddetail/${this.props.grounds._id._str}`} className="sectionground-img">
                 <img className="sectionground-imgg" src={this.props.grounds.image} alt=""/>
-            </Link>
             <div className="sectionground-content">
                 <div className="sectionground-content-title regular">
-                  <Link to="/Grounddetail" className="f_34 g_3">{this.props.grounds.text}</Link>
+                  <span className="f_34 g_3">{this.props.grounds.text}</span>
                 </div>
                 <div className="sectionground-content-info">
                   <span className="sectionground-location f_24 g_1">{this.props.grounds.location}</span>
@@ -21,10 +20,11 @@ class Grounds extends React.Component {
                   </div>
                 </div>
             </div>
+            </Link>
         </div>
-
         );
       }
     }
   
-	export default Grounds;
+    export default (Grounds); 
+  

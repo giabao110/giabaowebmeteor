@@ -9,12 +9,14 @@ import  Grounddetail from '../../../client/lib/grounddetail/grounddetail';
 
 const browserHistory = createBrowserHistory();
 
+import  App from './App';
+
 export const renderRoutes = () => (
   <Router history={browserHistory}>
     <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/Grounds' component={Grounds}/>
-        <Route exact path='/Grounddetail' component={Grounddetail}/>
+        <Route exact path='/' render={() => <App body={<Home/>}/>}/>
+        <Route exact path='/Grounds' render={() => <App body={<Grounds/>}/>}/>
+        <Route exact path='/Grounddetail/:GroundID' render={() => <App body={<Grounddetail/>}/>}/>
     </Switch>
   </Router>
 );

@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import  '/node_modules/bootstrap';
 import	Modal from './Modal';
 import  Rate from '../../../components/Rating';
-import { withTracker } from 'meteor/react-meteor-data';
-import { MatchsCol } from '../../../../../imports/api/matchs';
-
 
 class Matchs extends Component { 
   render() {
