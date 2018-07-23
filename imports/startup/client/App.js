@@ -8,7 +8,7 @@ class App extends React.Component {
       <div>
         <Navigation count={this.props.incompleteCount}/>
           <div className="football__wraper">
-            {this.props.body}
+            {this.props.children}
           <Footer/>
         </div>
       </div>

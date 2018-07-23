@@ -1,0 +1,56 @@
+.bg-img {
+  /* The image used */
+  background-image: url("./img/banner/banner1.jpg");
+
+  /* Control the height of the image */
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add styles to the form container */
+.contain {
+  right: 0;
+  /* margin: 0px 13px 27px 50px; */
+  max-width: 300px;
+  padding: 40px 10px 10px 10px;
+  background-color: rgb(13, 13, 13, 0.4);
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 11px;
+  margin: 0px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.login__{
+  display: flex;
+  justify-content: space-between;
+  margin-top:10px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { withTracker } from 'meteor/react-meteor-data';
 import { MatchsCol } from '../../../imports/api/matchs';
+import AccountsUIWrapper from '../../../imports/ui/AccountsUIWrapper';
 
 class Navigation extends React.Component {
     render() {
@@ -18,29 +19,30 @@ class Navigation extends React.Component {
                   <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
                 </form> 
                 <ul className="nav__links medium f_22"> 
-                  <li><Link to="/">Find Match</Link></li>
-                  <li><Link to="/Grounds">Grounds</Link></li>
-                  <li><Link to="/Grounds">Messages</Link></li>
+                  <li><Link to="/home">Find Match</Link></li>
+                  <li><Link to="/grounds">Grounds</Link></li>
+                  {/* <li><Link to="/grounds">Messages</Link></li> */}
+                  <li><Link to="/dashboard">Dashboard</Link></li>
                   <li><Link to="/">Upcoming</Link></li>
                   <span className="regular f_20 ">{this.props.incompleteCount}</span>
                 </ul>
               </nav>
               <div className="nav__right">
                 <div className="nav__user">
-                  <img className="nav__user-img" src="img/topbar/avt-user.png" alt=""/>
+                  <img className="nav__user-img" src="http://www.one-versus-one.com/img/rounds/avatar-round-ronaldo.png" alt=""/>
                 </div>
-                <div className="nav__dropdwn">
+                <AccountsUIWrapper/>
+                {/* <div className="nav__dropdwn">
                   <button className="nav__dropdwn-btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </button>
                   <div className="nav__dropdwn-menu dropdown-menu" aria-labelledby="dropdownMenu2">
                     <button className="dropdown-item regular f_24" type="button">Accout</button>
                     <button className="dropdown-item regular f_24" type="button">Settings</button>
                     <button className="dropdown-item regular f_24" type="button">Sign out</button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
-          {this.props.children}
         </div>
       );
     }

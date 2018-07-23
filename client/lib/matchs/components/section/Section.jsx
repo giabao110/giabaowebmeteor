@@ -3,7 +3,6 @@ import '/node_modules/bootstrap';
 import { withTracker } from 'meteor/react-meteor-data';
 import { MatchsCol } from '../../../../../imports/api/matchs';
 import Header from '../Header';
-
 import Matchs from './Matchs';
 
 class Section extends Component {
@@ -18,17 +17,17 @@ class Section extends Component {
     }
 
     renderMatchs() {
-      console.log(this.state.strSortRate);
+      // console.log(this.state.strSortRate);
       let matchs= this.props.matchs
-      console.log('strSearch: ',this.state.strSearch);
+      // console.log('strSearch: ',this.state.strSearch);
       if(this.state.strSortRate.toString() !== '')
         matchs = matchs.filter(match => match.rating.toString() === this.state.strSortRate);
       
-      console.log('matchs1: ',matchs);
+      // console.log('matchs1: ',matchs);
       if(this.state.strSearch.toString() !== '')
       matchs = matchs.filter(match => match.text.toLowerCase().includes(this.state.strSearch.toLowerCase()));
      
-      console.log('matchs2: ',matchs);
+      // console.log('matchs2: ',matchs);
       return matchs.map((matchs) =><Matchs key={matchs._id} matchs={matchs}/>)
     }
 

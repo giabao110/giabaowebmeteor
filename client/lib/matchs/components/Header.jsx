@@ -6,14 +6,12 @@ class Header extends React.Component {
     event.preventDefault();
     const text = ReactDOM.findDOMNode(this.refs.search).value.trim();
     this.props.onClickSearchGo(text);
-
   }
 
   handleSortRate(event){
     event.preventDefault();
     const rate = ReactDOM.findDOMNode(this.refs.sortrate).value;
     this.props.onClickSortRate(rate);
-
   }
 
     render() {
@@ -36,7 +34,7 @@ class Header extends React.Component {
                 <div className="header__col-rating ">
                     <div className="input-group">
                       <select className="regular header__border f_24" ref="sortrate" onChange={this.handleSortRate.bind(this)}>
-                          <option >Rating</option>
+                          <option value="">Rating</option>
                           <option value="1" >✮</option>
                           <option value="2" >✮✮</option>
                           <option value="3" >✮✮✮</option>
