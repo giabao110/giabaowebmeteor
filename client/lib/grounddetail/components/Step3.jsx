@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import { Link } from "react-router-dom";
 
 const customStyles = {
   content : {
@@ -191,12 +192,12 @@ class App extends React.Component {
                   <span className="icon-cancel"></span>
                   <a onClick={this.closeModal} href="" className="stp2__footertext regular f_28 gr">Cancel</a>
                </div>
-               <div>
+               <Link to="/">
                   <button onClick={this.closeModal} className="stp3__footerbtn regular f_28 wt">
                   <span className="icon-next"></span>
                   <span className="stp__2-btntext"> Send Invite </span>
                   </button>
-               </div>
+               </Link>
             </div>
          </div>
       </Modal>

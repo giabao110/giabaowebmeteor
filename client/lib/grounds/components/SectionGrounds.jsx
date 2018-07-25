@@ -38,7 +38,8 @@ class SectionGrounds extends React.Component {
   }
   
   export default withTracker((props) => {
-    // console.log(GroundsCol.find({_id: new Mongo.ObjectID(props.match.params.GroundID)}, { sort: { createdAt: -1 } }).fetch());
+    Meteor.subscribe('grounds');
+    Meteor.subscribe('matchs');
     return {
       grounds: GroundsCol.find({}, { sort: { createdAt: -1 } }).fetch(),
     };

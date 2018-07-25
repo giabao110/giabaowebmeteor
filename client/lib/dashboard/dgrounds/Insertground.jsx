@@ -5,7 +5,7 @@ import { Meteor } from 'meteor/meteor';
 export default class Insertground extends React.Component {
   InsertThisGrounds(event){
     event.preventDefault();
-
+    
     // GET VALUE
     const name =  ReactDOM.findDOMNode(this.refs.names).value.trim();
     const location =  ReactDOM.findDOMNode(this.refs.location).value.trim();
@@ -14,9 +14,9 @@ export default class Insertground extends React.Component {
     const hoursfree =  ReactDOM.findDOMNode(this.refs.hoursfree).value.trim();
     const status =  ReactDOM.findDOMNode(this.refs.status).value;
     const img =  ReactDOM.findDOMNode(this.refs.img).value.trim();
+    const groundId =  ReactDOM.findDOMNode(this.refs.groundID).value.trim();
 
-    Meteor.call('grounds.insert',name.toString(),location,price,rating,hoursfree,img,status,);
-
+    Meteor.call('grounds.insert',groundId,name.toString(),location,price,rating,hoursfree,img,status,);
     console.log(name);
     console.log(location);
     console.log(price);
@@ -24,6 +24,8 @@ export default class Insertground extends React.Component {
     console.log(hoursfree);
     console.log(status);
     console.log(img);
+    console.log(groundId);
+  
     // ReactDOM.findDOMNode(this.refs.names).value = '';
   }  
 
@@ -56,7 +58,11 @@ export default class Insertground extends React.Component {
                 </div>
                 <div className="col-md-4 mb-3">
                   <label >Username</label>
-                  <input type="text" className="form-control" id="validationServer02" placeholder="Username" />
+                  <input type="text" className="form-control" placeholder="Username" />
+                </div>
+                <div className="col-md-4 mb-3">
+                  <label >GroundsID</label>
+                  <input type="text" className="form-control" placeholder="groundID" ref="groundID"/>
                 </div>
               </div>
               <div className="form-row">

@@ -24,7 +24,7 @@ class Info extends React.Component {
                  <img className="info__right-user" src="http://www.one-versus-one.com/img/rounds/avatar-round-ronaldo.png" alt=""/>
               </div>
               <div className="info__right-name regular">
-                 <p className="f_24" >Phuong Nguyen</p>
+                 <p className="f_24" >{this.props.grounds[0].author}</p>
                  <p className="f_22 g_2" >Owner</p>
               </div>
            </div>
@@ -52,6 +52,7 @@ class Info extends React.Component {
     }
   }
   export default withRouter(withTracker((props) => {
+    Meteor.subscribe('grounds');
     return {
       grounds: GroundsCol.find({_id: new Mongo.ObjectID(props.match.params.GroundID)}, { sort: { createdAt: -1 } }).fetch(),
     };

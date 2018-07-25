@@ -1,7 +1,5 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-// import { withTracker } from 'meteor/react-meteor-data';
-import { MatchsCol } from '../../../../imports/api/grounds';
 
 class Listgrounds extends React.Component {
   deleteThisGrounds() {
@@ -9,11 +7,12 @@ class Listgrounds extends React.Component {
     Meteor.call('grounds.remove', this.props.ground._id);
   }   
   render() {
+    // console.log(this.props.ground.groundId);
       return (
         <tr>
           <th scope="row">{this.props.index}</th>
           <td>""</td>
-          <td>{this.props.ground.text}</td>
+        
           <td>{this.props.ground.location}</td>
           <td>""</td>
           <td>${this.props.ground.price}</td>

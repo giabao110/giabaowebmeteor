@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import AccountsUIWrapper from '../../imports/ui/AccountsUIWrapper';
+
 
 class Login extends React.Component {
       render() {
@@ -24,11 +24,11 @@ class Login extends React.Component {
                   <li><Link to="/dashboard">Dashboard</Link></li>
                   <li><Link to="/">Upcoming</Link></li>
                   {/* <span className="regular f_20 ">{this.props.incompleteCount}</span> */}
-                  <div id="login-buttons" className="login-buttons-dropdown-align-">
+                  {/* <div id="login-buttons" className="login-buttons-dropdown-align-">
                         <div className="login-link-and-dropdown-list login-form-sign-in">
                         <a className="login-link-text" id="login-sign-in-link">Sign in ▾</a>
                   </div>
-                  </div>
+                  </div> */}
                 </ul>
               </nav>
             </div>

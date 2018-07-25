@@ -146,8 +146,25 @@ position: relative;
   }
 }
 
+/* SIGN UP */
 
+a.login-link-text#login-sign-in-link{
+  color:#fff;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
+  color: #c9c9c9;
+  font-size:11px;
+}
 
+a.login-link-text#login-name-link{
+  color:#fff;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
+  color: #c9c9c9;
+  font-size:11px;
+}
 
 
 

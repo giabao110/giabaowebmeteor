@@ -1,12 +1,17 @@
 
 /* SLIDER */
 div.rc-tabs-tab{
-  padding:11px 17px;
+  padding: 11px 0px 11px 0px;
   background:#ffffff;
   font-family: 'Ubuntu';
   font-weight: normal;
   font-style: normal;
-  
+  width: 43px;
+  height: 44px !important;
+  text-align: center;
+}
+.rc-tabs.rc-tabs-top{
+  border: none;
 }
 
 div.rc-tabs-top .rc-tabs-tab{
@@ -26,25 +31,64 @@ div.rc-tabs-top .rc-tabs-bar{
   border-bottom:0px;
 }
 
-/* .sexy-line-cus{
-
-  position: relative;
-  margin: 1.5px 0;
+.hr_slider { 
+  margin: 32px 0 0px 0;
   height: 0.5px;
   border: 0;
   background: black;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
-} */
+}
+.hr_sliderdown { 
+  margin: 3px 0 -38px 0;
+  height: 0.5px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
+}
 
-
-div.rc-tabs-ink-bar.rc-tabs-ink-bar-animated{
-  background: #fff url(img/grounds/groundshome/select.svg) no-repeat left center;
-  background-size: 10px;
-  background-position-x: 12px;
+.rc-tabs-ink-bar.rc-tabs-ink-bar-animated{
+  background: #fff url(img/grounds/groundshome/select.svg) no-repeat center center;
+  background-size: 14px;
   z-index: 1;
-  position: relative;
+  position: absolute;
+
 }
 
 div.rc-tabs-top {
   border-bottom: none;
 }
+div.rc-tabs-top .rc-tabs-ink-bar{
+  height: 4px;
+  bottom: 0;
+  left: 0;
+}
+
+div.rc-tabs-ink-bar.rc-tabs-ink-bar-animated[style]{
+  width: 44px !important;
+}
+
+.rc-tabs-ink-bar-animated[style]{
+  transition: none;
+}
+
+span.rc-tabs-tab-prev-icon::before{
+  content: "" !important;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background: url(https://cdn4.iconfinder.com/data/icons/app2/512/prev-512.png) no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+span.rc-tabs-tab-next-icon::before{
+  content: "" !important;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background: url(https://cdn4.iconfinder.com/data/icons/app2/512/next-512.png) no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+} 

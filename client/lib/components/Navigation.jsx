@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { withTracker } from 'meteor/react-meteor-data';
 import { MatchsCol } from '../../../imports/api/matchs';
 import AccountsUIWrapper from '../../../imports/ui/AccountsUIWrapper';
+import { Meteor } from 'meteor/meteor';
 
 class Navigation extends React.Component {
     render() {
@@ -19,17 +20,22 @@ class Navigation extends React.Component {
                   <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
                 </form> 
                 <ul className="nav__links medium f_22"> 
-                  <li><Link to="/home">Find Match</Link></li>
+                  <li><Link to="/">Find Match</Link></li>
                   <li><Link to="/grounds">Grounds</Link></li>
-                  {/* <li><Link to="/grounds">Messages</Link></li> */}
-                  <li><Link to="/dashboard">Dashboard</Link></li>
                   <li><Link to="/">Upcoming</Link></li>
                   <span className="regular f_20 ">{this.props.incompleteCount}</span>
+                  {/* <li><Link to="/grounds">Messages</Link></li> */}
+                  { this.props.currentUser ?
+                  <li><Link to="/dashboard">Dashboard</Link></li> :''
+                  }
+                  { this.props.currentUser ?
+                  <li><Link to="/profile">Profile</Link></li> :''
+                  }
                 </ul>
               </nav>
               <div className="nav__right">
                 <div className="nav__user">
-                  <img className="nav__user-img" src="http://www.one-versus-one.com/img/rounds/avatar-round-ronaldo.png" alt=""/>
+                  <img className="nav__user-img" src={Meteor.user()} alt=""/>
                 </div>
                 <AccountsUIWrapper/>
                 {/* <div className="nav__dropdwn">
@@ -48,8 +54,10 @@ class Navigation extends React.Component {
     }
   } 
   export default withTracker(() => {
+    Meteor.subscribe('matchs');
     return {
       matchs: MatchsCol.find({}, { sort: { datecreated: -1 } }).fetch(),
-      incompleteCount: MatchsCol.find({ checked: { $eq: false } }).count(),
+      incompleteCount: MatchsCol.find({}).count(),
+      currentUser: Meteor.user(),
     };
   })(Navigation);

@@ -4,6 +4,12 @@ import { check } from 'meteor/check';
  
 export const MatchsCol = new Mongo.Collection('matchs');
 
+if (Meteor.isServer) {
+  // This code only runs on the server
+  Meteor.publish('matchs', function tasksPublication() {
+    return MatchsCol.find();
+  });
+}
 
 Meteor.methods({
   'matchs.insert'(text) {
@@ -12,7 +18,6 @@ Meteor.methods({
     Tasks.insert({
       text,
       createdAt: new Date(),
-      
     /*   owner: this.userId,
       username: Meteor.users.findOne(this.userId).username, */
     });

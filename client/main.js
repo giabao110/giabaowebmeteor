@@ -11,20 +11,20 @@ Meteor.startup(() => {
   render(renderRoutes(), document.getElementById('root'))
 });
 
+
 // if(Meteor.isClient){
 //   Template.LoginMenu.events({
-//     'click [data-action=login]'(events,Template){
-//       console.log("login");
-//       event.preventDefault();
+//     'click .login':(e) =>{
+//       e.preventDefault();
 //       Meteor.loginWithGithub({
-//         requestPermissions: ['email']
+//         requestPermissions: ['public_profile', 'email']
 //       }, (error) => {
 //         if (error) {
 //           Session.set('errorMessage', error.reason || 'Unknown error');
 //         }
 //       });
 //     },
-//     'click [data-action=logout]'(e,tmpl){
+//     'click .logout':(e) =>{
 //       e.preventDefault();
 //       Meteor.logout();
 //     }
@@ -35,3 +35,4 @@ Meteor.startup(() => {
 //     }
 //   });
 // }
+

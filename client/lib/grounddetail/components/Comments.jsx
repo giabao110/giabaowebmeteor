@@ -49,9 +49,14 @@ class Comments extends React.Component {
   }
   
   export default withTracker(() => {
+    Meteor.subscribe('comments');
     return {
       comments: CommentCol.find({}, { sort: { createdAt: -1 } }).fetch(),
       incompleteCount: CommentCol.find({ checked: { $ne: true } }).count(),
     };
+    // return {
+    //   comments: CommentCol.find({}, { sort: { createdAt: -1 } }).fetch(),
+    //   incompleteCount: CommentCol.find({ checked: { $ne: true } }).count(),
+    // };
   })(Comments);
 

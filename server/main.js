@@ -30,14 +30,14 @@ import { ServiceConfiguration } from 'meteor/service-configuration';
 //   });
 // }
 
-// if(Meteor.isServer){
-//     ServiceConfiguration.configurations.remove({
-//       service: "github"
-//     });
-//     ServiceConfiguration.configurations.insert({
-//       service: "github",
-//       appId: '4af611cc0a0e811827a4',
-//       secret: '05593727f2e52e8284be898baa5b38a2f5649859'
-//     });
-// }
+if(Meteor.isServer){
+    ServiceConfiguration.configurations.remove({
+      service: "github"
+    });
+    ServiceConfiguration.configurations.insert({
+      service: "github",
+      appId: '4af611cc0a0e811827a4',
+      secret: '05593727f2e52e8284be898baa5b38a2f5649859'
+    });
+}
 
