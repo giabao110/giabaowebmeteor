@@ -12,12 +12,23 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'matchs.insert'(text) {
-    check(text, String);
-
-    Tasks.insert({
-      text,
+  'matchs.insert'(name,dateop,starttime,endtime,players,rating,day,location) {
+  
+    MatchsCol.insert({
+      name,
+      dateop: new Date(dateop),
+      starttime,
+      endtime,
+      players,
+      rating,
+      day,
+      location,
       createdAt: new Date(),
+      owner: this.userId,
+      username: Meteor.users.findOne(this.userId).username,
+      team: Meteor.users.findOne(this.userId).profile.teamname,
+      logo: Meteor.users.findOne(this.userId).profile.logoteam,
+      avt: Meteor.users.findOne(this.userId).profile.avt,
     /*   owner: this.userId,
       username: Meteor.users.findOne(this.userId).username, */
     });
@@ -25,7 +36,6 @@ Meteor.methods({
 
   'matchs.remove'(taskId) {
     check(taskId, String);
- 
     Tasks.remove(taskId);
   },
 });

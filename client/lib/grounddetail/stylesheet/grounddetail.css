@@ -82,7 +82,8 @@
 }
 
 .info__right-rate-border{
-  border-bottom: 0.5px solid #b8b8b8;
+  margin: 15px 0;
+  border: 0.5px solid #b8b8b8;
 }
 
 .info__content-about{
@@ -331,3 +332,10 @@
 .headerground__form button:focus{
   outline: none;
 }
+
+.read-more-button{
+  color:#56ab0a;
+  text-decoration:underline;
+  cursor: pointer;
+}
+

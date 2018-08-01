@@ -70,12 +70,12 @@ class App extends React.Component {
             <p className="stp1__title bold f_40">Book your Match</p>
             <div className="stp1__ stp1__info">
                <div className="regular ">
-                  <span className="f_28 gr">Old Trafford Stadium </span>
+                  <span className="f_28 gr">{this.props.name}</span>
                   <span className="f_24 g_6 stp1__infopadd">|</span>
-                  <span className="f_24 g_6">Sir Matt Busby Way, Stretford, Manchester M16 0RA, UK</span>
+                  <span className="f_24 g_6">{this.props.location}</span>
                </div>
                <div className="regular f_22">
-                  October 2017
+               {this.props.month} {this.props.year}
                </div>
             </div>
             <div className="stp1_checker">
@@ -94,22 +94,34 @@ class App extends React.Component {
                </div>
             </div>
             <div className="stp1__time">
-               <div className="section__time-number light f_60 gr">10</div>
+               <div className="section__time-number light f_60 gr">{this.props.date}</div>
                <div className="section__time-day regular f_24"> 
-                  <span className="section__time-dayabv">Monday</span>
-                  <span className="section__time-daybl">Oct 2017</span>
+                  <span className="section__time-dayabv">{this.props.day}</span>
+                  <span className="section__time-daybl">{this.props.month} {this.props.year}</span>
                </div>
                <div className="section__time-from regular f_24">
                   <span className="section__time-dayabv">From:</span>
                   <span className="section__time-dayabv">To:</span>
                </div>
                <div className="regular f_24 gr">
-                  <span className="section__time-dayabv">08:00am</span>
-                  <span className="section__time-dayabv">09:00am</span>
+                  <span className="section__time-dayabv">{this.props.starttime}</span>
+                  <span className="section__time-dayabv">{this.props.endtime}</span>
                </div>
             </div>
             <div className="stp1_foot-right">
-               <Step2 ></Step2>
+               <Step2 name={this.props.name} 
+                      location={this.props.location} 
+                      team={this.props.team}
+                      day = {this.props.day}
+                      date = {this.props.date}
+                      month = {this.props.month}
+                      year = {this.props.year}
+                      starttime = {this.props.starttime}
+                      endtime = {this.props.endtime}
+                      players = {this.props.players}
+                      dayop = {this.props.dayop}
+                      rating = {this.props.rating}
+                      />
             </div>
          </div>
       </Modal>

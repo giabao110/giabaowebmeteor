@@ -1,37 +1,57 @@
 import React from 'react';
 import Step1 from './Step1';
+import  Rate from '../../components/Rating';
 
 import { withRouter } from "react-router-dom";
 import { withTracker } from 'meteor/react-meteor-data';
 import { GroundsCol } from '../../../../imports/api/grounds';
+import ReadMoreReact from 'read-more-react';
 
 class Info extends React.Component {
+
     render() {
       if(this.props.grounds.length === 0) return ''
+      let day = this.props.grounds[0].dateop.toString(),
+          starttime = this.props.grounds[0].starttime,
+          endtime = this.props.grounds[0].endtime;
       return (
       <div className="info">
         <div className="info__left">
            <img className="info__left-img" src={this.props.grounds[0].image} alt=""/>
         </div>
         <div className="info__right">
-           <title className="info__right-title medium f_60">{this.props.grounds[0].text}</title>
+           <title className="info__right-title medium f_60">{this.props.grounds[0].namesta}</title>
            <p className="info__right-title-s regular f_24 g_1">{this.props.grounds[0].location}</p>
-           <div className="info__right-rate-border">
-              <img className="info__right-rate" src="img/saintlouisfc/rate.png" alt=""/>
-           </div>
+           <Rate rate={Number(this.props.grounds[0].rating)}/>
+           <hr className="info__right-rate-border"/>          
            <div className="info__content-about">
               <div className="info__right-user-div">
                  <img className="info__right-user" src="http://www.one-versus-one.com/img/rounds/avatar-round-ronaldo.png" alt=""/>
               </div>
               <div className="info__right-name regular">
-                 <p className="f_24" >{this.props.grounds[0].author}</p>
+                 <p className="f_24" >{this.props.grounds[0].username}</p>
                  <p className="f_22 g_2" >Owner</p>
               </div>
            </div>
-           <p className="info__right-content regular f_24">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+           <div className="info__right-content regular f_24"><ReadMoreReact text={this.props.grounds[0].content}
+                min={10}
+                ideal={50}
+                max={100} /></div>
            <p className="info__right-price regular f_46 gr">${this.props.grounds[0].price}.00<span className="info__right-price-s regular f_24 g_3">/hr</span></p>
            <div className="info__right-button">
-              <Step1/>
+              <Step1  name={this.props.grounds[0].namesta} 
+                      location={this.props.grounds[0].location}
+                      team={this.props.grounds[0].team}
+                      day = {moment(day).format('dddd')}
+                      date = {moment(day).format('DD')}
+                      month = {moment(day).format('MMM')}
+                      year = {moment(day).format('YYYY')}
+                      starttime = {moment(starttime,'HH:mm').format('hh:mm a')}
+                      endtime = {moment(endtime,'HH:mm').format('hh:mm a')}
+                      players = {this.props.grounds[0].players}
+                      dayop = {this.props.grounds[0].dateop}
+                      rating = {this.props.grounds[0].rating}
+              />
               <div className="info__right-farvo regular f_24">
                  <span className="icon-farvo info__right-farvoicon"></span>
                  <a className="info__right-farvo-img-p g_3" href="">

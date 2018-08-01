@@ -11,28 +11,19 @@ Meteor.startup(() => {
   render(renderRoutes(), document.getElementById('root'))
 });
 
-
-// if(Meteor.isClient){
-//   Template.LoginMenu.events({
-//     'click .login':(e) =>{
-//       e.preventDefault();
-//       Meteor.loginWithGithub({
-//         requestPermissions: ['public_profile', 'email']
-//       }, (error) => {
-//         if (error) {
-//           Session.set('errorMessage', error.reason || 'Unknown error');
+// Template.loginButtons.events({
+// 	"click #login-buttons-logout": function(e) {
+//     e.preventDefault();
+// 		Meteor.logout((error) => {
+//         if(error)
+//         {
+//           console.log(error);
 //         }
-//       });
-//     },
-//     'click .logout':(e) =>{
-//       e.preventDefault();
-//       Meteor.logout();
-//     }
-//   });
-//   Template.LoginMenu.helpers({
-//     isLoginServicesConfigured(){
-//       return Accounts.loginServicesConfigured();
-//     }
-//   });
-// }
-
+//         else{
+//           console.log("Logout Succesfully");
+//         return () => history.push('/login')
+//         }
+			
+// 		});
+// 	}
+// });

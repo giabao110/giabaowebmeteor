@@ -47,3 +47,27 @@ div select.form-control:focus {
   outline: none;
   box-shadow: none;
 }
+
+
+input[type=date], input[type=datetime-local], input[type=month], input[type=time]{
+  width: 100%;
+  padding: 10px;
+  margin: 0px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    width: 100%;
+}
+
+.btn-danger {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    width: 100%;
+}

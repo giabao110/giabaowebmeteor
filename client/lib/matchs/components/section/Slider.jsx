@@ -3,7 +3,6 @@ import React from 'react';
 import Tabs, { TabPane } from 'rc-tabs/lib';
 import TabContent from 'rc-tabs/lib/SwipeableTabContent';
 import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
-import ReactDOM from 'react-dom';
 
 const PanelContent = ({ id }) => (
   <div>{[1, 2, 3, 4].map(item => <p key={item}>{id}</p>)}</div>
@@ -14,8 +13,8 @@ class Slider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeKey: '5',
-      start: 0,
+      activeKey: moment().format('DD'),
+      tab:"2"
     };
   }
 
@@ -26,7 +25,6 @@ class Slider extends React.Component {
   }
 
   onTabClick = (key) => {
-    // console.log(`onTabClick ${key}`);
     const KEY = `${key}`; 
     if (key === this.state.activeKey) {  
       this.setState({
@@ -36,80 +34,74 @@ class Slider extends React.Component {
     this.props.handlegetDay(KEY)
   }
 
-  tick = () => {
-    this.setState({
-      start: this.state.start + 10,
-    });
-  }
-
   render() {
-    const start = this.state.start;
     return (
       <div>
        <hr className="hr_slider" />
         <Tabs
+        
           renderTabBar={() => <ScrollableInkTabBar onTabClick={this.onTabClick}/>}
           renderTabContent={() => <TabContent animatedWithMargin />}
           activeKey={this.state.activeKey}
           onChange={this.onChange}>
         
-          <TabPane tab={1} key="1">
+          <TabPane tab={1} key="01">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={2} key="2">
+          <TabPane tab={2} key="02">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={3} key="3">
+          <TabPane tab={3} key="03">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={4} key="4">
+          <TabPane tab={4} key="04">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={5} key="5">
+          <TabPane tab={5} key="05">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={6} key="6">
+          <TabPane tab={6} key="06">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={7} key="7">
+          <TabPane tab={7} key="07">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-         <TabPane tab={8} key="8">
+         <TabPane tab={8} key="08">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}
             </div>
           </TabPane>
 
-          <TabPane tab={9} key="9">
+          <TabPane tab={9} key="09">
           <hr className="hr_sliderdown"/><br/>
             <div className="section__div-row">
               {this.props.matchs}

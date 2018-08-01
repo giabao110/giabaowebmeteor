@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
-import MatchsCol from './matchs';
- 
+
+// var day = new Date();
 export const GroundsCol = new Mongo.Collection('grounds');
  
 if (Meteor.isServer) {
@@ -13,31 +13,32 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'grounds.insert'(groundId,namesta,location,price,rating,hoursfree,img,status) {
+  'grounds.insert'(namesta,content,location,dateop,starttime,endtime,price,rating,hoursfree,image,status,players) {
     check(namesta, String);
-    // Make sure the user is logged in before inserting a task
-    // if (! this.userId) {
-    //   throw new Meteor.Error('not-authorized');
-    // }
+    check(status, Boolean);
+    if (! this.userId) {
+      throw new Meteor.Error('not-authorized');
+    }
     GroundsCol.insert({
       _id: new Mongo.ObjectID(),
-      // matchsID: Meteor.users.findOne(this.userId).username,
-      groundId,
       namesta,
+      content,
       location,
+      dateop: new Date(dateop),
+      starttime,
+      endtime,
       price,
       rating,
       hoursfree,
-      img,
+      image,
       status,
+      players,
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username,
-      author: Meteor.users.findOne(this.userId).username,
     });
   },
   'grounds.remove'(groundId) {
-    // check(groundId, String);
     GroundsCol.remove(groundId);
   }
 });

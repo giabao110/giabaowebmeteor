@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { Link } from "react-router-dom";
+import { Meteor } from 'meteor/meteor';
 
 const customStyles = {
   content : {
@@ -10,7 +11,7 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
+    transform             : 'translate(-50%, -52%)',
     width                 : '695px',
     height             : '646px',
     borderRadius          :0,
@@ -27,7 +28,6 @@ class App extends React.Component {
     super();
     this.state = {
       modalIsOpen: false
-      
     };
 
     this.openModal = this.openModal.bind(this);
@@ -36,8 +36,18 @@ class App extends React.Component {
   }
 
 
-  openModal() {
+  openModal(e) {
+    e.preventDefault();
     this.setState({modalIsOpen: true});
+    const name = this.props.name;
+    const dayop = this.props.dayop;
+    const starttime = this.props.starttime;
+    const endtime = this.props.endtime;
+    const players = this.props.players;
+    const rating = this.props.rating;
+    const day = this.props.date;
+    const location = this.props.location;
+    Meteor.call('matchs.insert',name,dayop,starttime,endtime,players,rating,day,location);
   }
 
   afterOpenModal() {
@@ -54,7 +64,7 @@ class App extends React.Component {
       <div>
       <button onClick={this.openModal} className="stp__3-btn regular f_28 wt">
       <span className="icon-next"></span>
-      <span className="stp__3-btntext"> FINISH </span>
+      <span className="stp__3-btntext" > FINISH </span>
       </button>
       <Modal
          isOpen={this.state.modalIsOpen}

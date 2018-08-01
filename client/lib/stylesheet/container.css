@@ -324,3 +324,9 @@ body ul{
 
 
 .class_name:before{content:”\f156″; color:#f00}
+
+
+
+html {
+  height: 100%;
+}

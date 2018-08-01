@@ -6,19 +6,32 @@ class Listgrounds extends React.Component {
     console.log(this.props.ground._id);
     Meteor.call('grounds.remove', this.props.ground._id);
   }   
+  updateThisGrounds(){
+    this.props.handleEdit(this.props.ground);
+  }
+
   render() {
     // console.log(this.props.ground.groundId);
       return (
         <tr>
-          <th scope="row">{this.props.index}</th>
-          <td>""</td>
-        
-          <td>{this.props.ground.location}</td>
-          <td>""</td>
-          <td>${this.props.ground.price}</td>
+            {/* Index */}
+          <th scope="row">{this.props.index}</th> 
+            {/* Username */}
+          <td>{this.props.ground.username}</td>
+            {/* Stadium */}
           <td>{this.props.ground.namesta}</td>
+           {/* Content */}
+           <td>{this.props.ground.content}</td>
+            {/* Location */} 
+          <td>{this.props.ground.location}</td>
+            {/* Rating */} 
+            <td>{this.props.ground.rating}</td>
+            {/* Price */} 
+            <td>${this.props.ground.price}</td>
+             {/* Price */} 
+          <td>{this.props.ground.status.toString()}</td>
           <td>
-            <button type="button" className="matchs__btnsz btn-danger">Update</button>
+            <button type="button" className="matchs__btnsz btn-danger" onClick={this.updateThisGrounds.bind(this)}>Update</button>
             <button type="button" className="matchs__btnsz btn-warning" onClick={this.deleteThisGrounds.bind(this)}>Remove</button>
           </td>
         </tr>
@@ -26,10 +39,4 @@ class Listgrounds extends React.Component {
       }
     }
     export default (Listgrounds);
-
-    // export default withTracker(() => {
-    //   return {
-    //     matchs: MatchsCol.find({}, { sort: { createdAt: -1 } }).fetch(),
-    //   };
-    // })(Section);
   

@@ -16,7 +16,9 @@ class SectionGrounds extends React.Component {
   // }
 
   renderGrounds() {
-    return this.props.grounds.map((grounds) => (
+    let grounds = this.props.grounds;
+    grounds = grounds.filter(ground => ground.status == true);
+    return grounds.map((grounds) => (
       <Grounds key={grounds._id} grounds={grounds} />
     ));
   }

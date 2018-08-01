@@ -1,12 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { withTracker } from 'meteor/react-meteor-data';
 import { MatchsCol } from '../../../imports/api/matchs';
-import AccountsUIWrapper from '../../../imports/ui/AccountsUIWrapper';
 import { Meteor } from 'meteor/meteor';
 
-class Navigation extends React.Component {
-    render() {
+class Navigation extends Component {
+  constructor(props){
+    super(props);
+    this.state = this.getMeteorData(),{
+      username: ''
+    };
+  }
+
+  getMeteorData(){
+    return { isAuthenticated: Meteor.userId() !== null };
+  }
+
+  componentWillMount(){
+    if (!this.state.isAuthenticated) {
+      this.props.history.push('/login');
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    if (!this.state.isAuthenticated) {
+      this.props.history.push('/login');
+    }
+  }
+  
+  logout = () =>{
+    Meteor.logout((error) => {
+    if (error) {
+        console.log(error);
+    } else {
+      this.props.history.push('/login')
+      }
+    });  
+  }
+    render() { 
+      let currentUser = this.props.currentUser;
+      let userDataAvailable = (currentUser !== undefined);
+      let loggedIn = (currentUser && userDataAvailable);
+      let dashboard,avt;
+      if (loggedIn) {
+        if (currentUser.profile.roles == "admin")
+        {
+          console.log(currentUser.profile.roles);
+          dashboard = <li><Link to="/dashboard">Dashboard</Link></li>;
+          avt = <img className="nav__user-img" src={currentUser.profile.avt} alt=""/>;
+        }
+        if (currentUser.profile.roles == "user") {
+          console.log(currentUser.profile.roles);
+          dashboard = <li><Link to="/grounds">Messages</Link></li>; 
+          avt = <img className="nav__user-img" src={currentUser.profile.avt} alt=""/>;
+        }
+      } 
       return(
         <div className="nav">
           <div className="football__wraper">
@@ -24,28 +72,24 @@ class Navigation extends React.Component {
                   <li><Link to="/grounds">Grounds</Link></li>
                   <li><Link to="/">Upcoming</Link></li>
                   <span className="regular f_20 ">{this.props.incompleteCount}</span>
-                  {/* <li><Link to="/grounds">Messages</Link></li> */}
-                  { this.props.currentUser ?
-                  <li><Link to="/dashboard">Dashboard</Link></li> :''
-                  }
-                  { this.props.currentUser ?
-                  <li><Link to="/profile">Profile</Link></li> :''
-                  }
+                  {dashboard}
+                  <li><Link to="/profile">Profile</Link></li> 
                 </ul>
               </nav>
               <div className="nav__right">
                 <div className="nav__user">
-                  <img className="nav__user-img" src={Meteor.user()} alt=""/>
+                  {avt}
                 </div>
-                <AccountsUIWrapper/>
-                {/* <div className="nav__dropdwn">
-                  <button className="nav__dropdwn-btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </button>
-                  <div className="nav__dropdwn-menu dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button className="dropdown-item regular f_24" type="button">Accout</button>
-                    <button className="dropdown-item regular f_24" type="button">Settings</button>
-                    <button className="dropdown-item regular f_24" type="button">Sign out</button>
-                  </div>
-                </div> */}
+                <div className="dropdown medium f_22 g_5">
+                  <a className="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  { loggedIn ? currentUser.username : '' }
+                  </a>
+                  { loggedIn ?  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a className="dropdown-item medium f_24 g_5" href="#">Change Password</a>
+                    <a onClick={this.logout} className="dropdown-item medium f_24 g_5" href="#">Logout</a>
+                  </div> : '' }
+                 
+                </div>
               </div>
             </div>
           </div>
@@ -55,9 +99,10 @@ class Navigation extends React.Component {
   } 
   export default withTracker(() => {
     Meteor.subscribe('matchs');
+    Meteor.subscribe('users');
     return {
-      matchs: MatchsCol.find({}, { sort: { datecreated: -1 } }).fetch(),
       incompleteCount: MatchsCol.find({}).count(),
       currentUser: Meteor.user(),
     };
   })(Navigation);
+

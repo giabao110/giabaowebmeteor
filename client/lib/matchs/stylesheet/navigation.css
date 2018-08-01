@@ -108,12 +108,14 @@ position: relative;
 /* USER */
 .nav__user {
 	 width: calc(55px / 2);
-	 height: calc(55px / 2);
+   height: calc(55px / 2);
+   margin-right: 10px;
 }
 
 .nav__user-img {
 	max-width: 100%;
-	max-height: 100%;
+  max-height: 100%;
+  border-radius: 50%;
 }
 
 /* DROPDOWN */
@@ -166,5 +168,14 @@ a.login-link-text#login-name-link{
   font-size:11px;
 }
 
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #56ab09 !important;
+    color: #fff !important;
+}
 
+.dropdown-toggle{
+  cursor: pointer;
+}
 

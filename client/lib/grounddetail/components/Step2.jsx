@@ -73,25 +73,26 @@ class Step2 extends React.Component {
             <div className="join__location">
                <div className="join__location-left">
                   <div className="join__locationimg">
-                     <img className="join__locationimgg" src="img/modal-matchrequest/location.jpg" alt=""/>
+                     <img className="join__locationimgg" src="https://i.pinimg.com/originals/db/0d/0a/db0d0ab65cf3e30f2ef6ede74ac82423.png" alt=""/>
                   </div>
                </div>
+               
                <div className="join__location-right">
-                  <p className="join__location-righttitle regular f_28 gr">Old Trafford Stadium</p>
-                  <p className="regular f_24 g_1">Sir Matt Busby Way, Stretford, Manchester M16 0RA, UK</p>
+                  <p className="join__location-righttitle regular f_28 gr">{this.props.name}</p>
+                  <p className="regular f_24 g_1">{this.props.location}</p>
                   <div className="section__time">
-                     <div className="section__time-number light f_60 gr">10</div>
+                     <div className="section__time-number light f_60 gr">{this.props.date}</div>
                      <div className="section__time-day regular f_24"> 
-                        <span className="section__time-dayabv">Monday</span>
-                        <span className="section__time-daybl">Oct 2017</span>
+                        <span className="section__time-dayabv">{this.props.day}</span>
+                        <span className="section__time-daybl">{this.props.month} {this.props.year}</span>
                      </div>
                      <div className="section__time-from regular f_24">
                         <span className="section__time-dayabv">From:</span>
                         <span className="section__time-dayabv">To:</span>
                      </div>
                      <div className="regular f_24 gr">
-                        <span className="section__time-dayabv">08:00am</span>
-                        <span className="section__time-dayabv">09:00am</span>
+                        <span className="section__time-dayabv">{this.props.starttime}</span>
+                        <span className="section__time-dayabv">{this.props.endtime}</span>
                      </div>
                   </div>
                </div>
@@ -117,7 +118,19 @@ class Step2 extends React.Component {
                   <p className="stp2__footertext2 regular f_24 gray">( You can do it later in your match management page )</p>
                </div>
                <div>
-                  <Step3/>
+                  <Step3  team={this.props.team}
+                          name={this.props.name} 
+                          location={this.props.location} 
+                          team={this.props.team}
+                          day = {this.props.day}
+                          date = {this.props.date}
+                          month = {this.props.month}
+                          year = {this.props.year}
+                          starttime = {this.props.starttime}
+                          endtime = {this.props.endtime}
+                          players = {this.props.players}
+                          dayop = {this.props.dayop}
+                          rating = {this.props.rating}/>
                </div>
             </div>
          </div>

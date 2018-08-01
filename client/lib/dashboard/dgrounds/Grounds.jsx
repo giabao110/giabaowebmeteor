@@ -7,10 +7,24 @@ import { MatchsCol } from '../../../../imports/api/matchs';
 import Insertground from './Insertground';
 
 class Grounds extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      strEdit: '',
+    };
+    this.handleEdit = this.handleEdit.bind(this);
+  }
+
+  handleEdit(value){
+    this.setState({
+      strEdit: value
+    });
+  }
+
   renderListmatchs() {
-    // console.log(this.props.grounds.groundid);
+    console.log("strEdit:",this.state.strEdit);
     return this.props.grounds.map((ground, index) => (
-      <Listgrounds key={index} ground={ground} index={index} />
+      <Listgrounds key={index} ground={ground} index={index} handleEdit={this.handleEdit}/>
       ));
     }
 
@@ -23,6 +37,7 @@ class Grounds extends React.Component {
             <th scope="col">#</th>
             <th scope="col">Username</th>
             <th scope="col">Stadium</th>
+            <th scope="col">Content</th>
             <th scope="col">Location</th>
             <th scope="col">Rating</th>
             <th scope="col">Price</th>
@@ -33,7 +48,7 @@ class Grounds extends React.Component {
             {this.renderListmatchs()}
           </tbody>
         </table>  
-        <Insertground/>
+        <Insertground edit={this.state.strEdit}/>
     </div>
         );
       }

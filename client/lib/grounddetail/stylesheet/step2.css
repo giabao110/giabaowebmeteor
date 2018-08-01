@@ -46,6 +46,9 @@
   width: 142px;
   height: 33px;
   border-top: none;
+  background-color: #fff;
+  border-bottom: none;
+  border-left: none;
 }
 
 .stp2__share{
@@ -53,6 +56,8 @@
   height: 33px;
   border-top: none;
   border-left: none;
+  background-color: #fff;
+  border-bottom: none;
 }
 
 .stp2__celendarr:focus {

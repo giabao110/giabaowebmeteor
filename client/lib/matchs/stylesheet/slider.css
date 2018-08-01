@@ -7,7 +7,7 @@ div.rc-tabs-tab{
   font-weight: normal;
   font-style: normal;
   width: 43px;
-  height: 44px !important;
+  height: 40px !important;
   text-align: center;
 }
 .rc-tabs.rc-tabs-top{
@@ -32,39 +32,40 @@ div.rc-tabs-top .rc-tabs-bar{
 }
 
 .hr_slider { 
-  margin: 32px 0 0px 0;
+  margin: 37px 0 0px 0;
   height: 0.5px;
   border: 0;
   background: black;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
 }
 .hr_sliderdown { 
-  margin: 3px 0 -38px 0;
-  height: 0.5px;
+  margin: 1px 0 -25px 0;
+  height: 1.5px;
   border: 0;
   background: black;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
 }
 
 .rc-tabs-ink-bar.rc-tabs-ink-bar-animated{
-  background: #fff url(img/grounds/groundshome/select.svg) no-repeat center center;
-  background-size: 14px;
-  z-index: 1;
+  background: #fff url(img/grounds/groundshome/select.svg) no-repeat;
+  background-size: 13px;
+  z-index: 0 !important;
   position: absolute;
-
+  background-position-x: center;
+  background-position-y: 0px;
 }
 
 div.rc-tabs-top {
   border-bottom: none;
 }
 div.rc-tabs-top .rc-tabs-ink-bar{
-  height: 4px;
+  height: 7px;
   bottom: 0;
   left: 0;
 }
 
 div.rc-tabs-ink-bar.rc-tabs-ink-bar-animated[style]{
-  width: 44px !important;
+  width: 43px !important;
 }
 
 .rc-tabs-ink-bar-animated[style]{
@@ -92,3 +93,7 @@ span.rc-tabs-tab-next-icon::before{
   background-size: cover;
   opacity: 0.7;
 } 
+
+div.rc-tabs-nav{
+  height: 47px !important;
+}
