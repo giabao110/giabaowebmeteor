@@ -24,7 +24,7 @@
 
 .stp1__info{
   margin-top:18px;
-  margin-bottom: 262px;
+  margin-bottom: 15px;
 }
 
 .stp1_checker{
@@ -122,4 +122,79 @@ line-height: 1.5;
     justify-content: flex-start;
     align-items: center;
     line-height: 1.25;
+  }
+
+  .hr_sliderstp1{
+    margin: 10px 0 0px 0;
+    height: 0.5px;
+    border: 0;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #e3e3e3));
+  }
+
+  .stp1__next{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background:#fff url(https://cdn4.iconfinder.com/data/icons/app2/512/prev-512.png) center center no-repeat;
+    background-size: 12px;
+    opacity: 0.8;
+    border-radius: 3px ;
+  }
+
+  .stp1__next:focus{
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .stp1__pre:focus{
+    outline: none;
+    cursor: pointer;
+  }
+
+  .stp1__cen:focus{
+    outline: none;
+    cursor: pointer;
+  }
+
+  .stp1__pre{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px; 
+    border: none;
+    background:#fff url(https://cdn4.iconfinder.com/data/icons/app2/512/next-512.png) center center no-repeat;
+    background-size: 12px;
+    opacity: 0.8;
+    border-radius: 3px ;
+  }
+
+  .stp1__cen{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background:#fff;
+    border:none;
+    border-right: 1px solid #c9c9c9;
+    border-left: 1px solid #c9c9c9;
+  }
+
+  /* border: 0.5px solid #000;
+  border-radius: 5px; */
+
+  .stp__btn:focus{
+    outline: none;
+    cursor: pointer;
+  }
+  .stp__btn{
+    border: 1px solid #c9c9c9;
+    border-radius: 3px ;
+    background: #fff;
+  }
+
+  .stp1__imgtest{
+    max-width: 100%;
+    margin-bottom: 30px;
   }

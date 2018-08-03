@@ -10,3 +10,18 @@ if (Meteor.isServer) {
     return CommentCol.find();
   });
 }
+
+Meteor.methods({
+  'comments.insert'(text) {
+    if (! this.userId) {
+      throw new Meteor.Error('not-authorized');
+    }
+    CommentCol.insert({
+      _id: new Mongo.ObjectID(),
+      author: Meteor.users.findOne(this.userId).username,
+      text,
+      team: Meteor.users.findOne(this.userId).profile.teamname,
+      logo: Meteor.users.findOne(this.userId).profile.logoteam,
+     });
+  },
+});

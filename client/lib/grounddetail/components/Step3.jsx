@@ -78,22 +78,22 @@ class App extends React.Component {
             <p className="medium f_40"> Completed</p>
             <div className="stp3__location">
                <div className="stp3_locationleft">
-                  <p className="stp3_locationcontent regular f_28 gr">Old Trafford Stadium</p>
-                  <p className="regular f_24 g_1">Stretford, Manchester </p>
+                  <p className="stp3_locationcontent regular f_28 gr">{this.props.name}</p>
+                  <p className="regular f_24 g_1">{this.props.location}</p>
                </div>
                <div className="stp3_locationright section__time">
-                  <div className="stp3_location10 light f_60 gr">10</div>
+                  <div className="stp3_location10 light f_60 gr">{this.props.date}</div>
                   <div className="section__time-day regular f_24"> 
-                     <span className="section__time-dayabv">Monday</span>
-                     <span className="section__time-daybl">Oct 2017</span>
+                     <span className="section__time-dayabv">{this.props.day}</span>
+                     <span className="section__time-daybl">{this.props.month} {this.props.year}</span>
                   </div>
                   <div className="section__time-from regular f_24">
                      <span className="section__time-dayabv">From:</span>
                      <span className="section__time-dayabv">To:</span>
                   </div>
-                  <div className="regular f_24 gr">
-                     <span className="section__time-dayabv">08:00am</span>
-                     <span className="section__time-dayabv">09:00am</span>
+                  <div className="stp3_times regular f_24 gr">
+                     <span className="section__time-dayabv">{this.props.starttime}</span>
+                     <span className="section__time-dayabv">{this.props.endtime}</span>
                   </div>
                </div>
             </div>
@@ -107,7 +107,7 @@ class App extends React.Component {
                   <form className="stp3__teamsdiv" action="">
                      <div className="stp3__teamslogo">
                         <div className="stp3__teamsloogoimg">
-                           <img className="stp3__teamsloogoimgg" src="img/step3/barca.png" alt=""/>
+                           <img className="stp3__teamsloogoimgg" src="https://upload.wikimedia.org/wikipedia/vi/thumb/9/91/FC_Barcelona_logo.svg/180px-FC_Barcelona_logo.svg.png" alt=""/>
                         </div>
                      </div>
                      <div>
@@ -121,7 +121,7 @@ class App extends React.Component {
                   <form className="stp3__teamsdiv" action="">
                      <div className="stp3__teamslogo">
                         <div className="stp3__teamsloogoimg">
-                           <img className="stp3__teamsloogoimgg" src="img/step3/barca.png" alt=""/>
+                           <img className="stp3__teamsloogoimgg" src="https://upload.wikimedia.org/wikipedia/vi/thumb/9/91/FC_Barcelona_logo.svg/180px-FC_Barcelona_logo.svg.png" alt=""/>
                         </div>
                      </div>
                      <div>
@@ -137,7 +137,7 @@ class App extends React.Component {
                   <form className="stp3__teamsdiv" action="">
                      <div className="stp3__teamslogo">
                         <div className="stp3__teamsloogoimg">
-                           <img className="stp3__teamsloogoimgg" src="img/step3/real.png" alt=""/>
+                           <img className="stp3__teamsloogoimgg" src="https://images-eu.ssl-images-amazon.com/images/I/71Pq6kR%2BHUL.png" alt=""/>
                         </div>
                      </div>
                      <div>
@@ -151,7 +151,7 @@ class App extends React.Component {
                   <form className="stp3__teamsdiv" action="">
                      <div className="stp3__teamslogo">
                         <div className="stp3__teamsloogoimg">
-                           <img className="stp3__teamsloogoimgg" src="img/step3/real.png" alt=""/>
+                           <img className="stp3__teamsloogoimgg" src="https://images-eu.ssl-images-amazon.com/images/I/71Pq6kR%2BHUL.png" alt=""/>
                         </div>
                      </div>
                      <div>
@@ -167,7 +167,7 @@ class App extends React.Component {
                   <form className="stp3__teamsdiv" action="">
                      <div className="stp3__teamslogo">
                         <div className="stp3__teamsloogoimg">
-                           <img className="stp3__teamsloogoimgg" src="img/step3/zigvy.png" alt=""/>
+                           <img className="stp3__teamsloogoimgg" src="https://itviec.com/employers/zigvy/logo/social/zigvy-logo.jpg?reFbyyyi2emJ8RGLLrD3toSa" alt=""/>
                         </div>
                      </div>
                      <div>
@@ -181,7 +181,7 @@ class App extends React.Component {
                   <form className="stp3__teamsdiv" action="">
                      <div className="stp3__teamslogo">
                         <div className="stp3__teamsloogoimg">
-                           <img className="stp3__teamsloogoimgg" src="img/step3/zigvy.png" alt=""/>
+                           <img className="stp3__teamsloogoimgg" src="https://itviec.com/employers/zigvy/logo/social/zigvy-logo.jpg?reFbyyyi2emJ8RGLLrD3toSa" alt=""/>
                         </div>
                      </div>
                      <div>
@@ -202,7 +202,7 @@ class App extends React.Component {
                   <span className="icon-cancel"></span>
                   <a onClick={this.closeModal} href="" className="stp2__footertext regular f_28 gr">Cancel</a>
                </div>
-               <Link to="/">
+               <Link className="stp2__a" to="/">
                   <button onClick={this.closeModal} className="stp3__footerbtn regular f_28 wt">
                   <span className="icon-next"></span>
                   <span className="stp__2-btntext"> Send Invite </span>

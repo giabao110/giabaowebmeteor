@@ -71,3 +71,7 @@ input[type=date], input[type=datetime-local], input[type=month], input[type=time
     border-color: #ffc107;
     width: 100%;
 }
+
+.btn-click {
+  border: 1px solid #c9c9c9;
+}

@@ -1,32 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import { CommentCol } from '../../../../imports/api/comments';
-import { GroundsCol } from '../../../../imports/api/grounds';
-
+import { Meteor } from 'meteor/meteor';
 import Text from './Text';
 
 class Comments extends React.Component {
+  constructor(props) {
+    super(props);
+    this.text = React.createRef();
+  }
   renderComments() {
-    return this.props.comments.map((grounds) => (
-      <Text key={grounds._id} comment={grounds} />
+    return this.props.comments.map((comment) => (
+      <Text key={comment._id} comment={comment} />
     ));
   }  
   handleSubmit(event) {
     event.preventDefault();
+    const text = this.text.current.value;
  
-    // Find the text field via the React ref
-    const comment_body = ReactDOM.findDOMNode(this.refs.inputComment).value.trim();
- 
-    CommentCol.insert({
-     author:"Cristiano Ronaldo",
-     comment_body,
-     fbteam:"Real Madrid",
-     img:"http://www.one-versus-one.com/img/rounds/avatar-round-ronaldo.png"
-    });
- 
-    // Clear form
-    ReactDOM.findDOMNode(this.refs.inputComment).value = '';
+    Meteor.call('comments.insert',text);
+
+    this.text.current.value = "";
   }
 
   render() {
@@ -39,7 +33,8 @@ class Comments extends React.Component {
           {this.renderComments()}
           <hr className="sexy_linee"/>
           <form className="headerground__form" onSubmit={this.handleSubmit.bind(this)}>
-            <input className="headerground__comment_input italic f_24" placeholder="Type your comment here ..." ref="inputComment"/>  
+          
+            <input className="headerground__comment_input italic f_24" placeholder="Type your comment here ..." ref={this.text}/>  
             <button className="headerground__comment_btn regular f_24">Send</button>
           </form>
         </div>
@@ -54,9 +49,5 @@ class Comments extends React.Component {
       comments: CommentCol.find({}, { sort: { createdAt: -1 } }).fetch(),
       incompleteCount: CommentCol.find({ checked: { $ne: true } }).count(),
     };
-    // return {
-    //   comments: CommentCol.find({}, { sort: { createdAt: -1 } }).fetch(),
-    //   incompleteCount: CommentCol.find({ checked: { $ne: true } }).count(),
-    // };
   })(Comments);
 

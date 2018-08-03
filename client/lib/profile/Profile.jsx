@@ -65,7 +65,7 @@ class Profile extends React.Component {
           </div>
           <button className="matchs__btnsz btn-primary" type="submit">Insert</button>
       </form>
-    </div>
+      </div>
         );
       }
     }

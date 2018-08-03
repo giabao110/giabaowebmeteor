@@ -44,7 +44,7 @@ class Info extends React.Component {
                       team={this.props.grounds[0].team}
                       day = {moment(day).format('dddd')}
                       date = {moment(day).format('DD')}
-                      month = {moment(day).format('MMM')}
+                      month = {moment(day).format('MMMM')}
                       year = {moment(day).format('YYYY')}
                       starttime = {moment(starttime,'HH:mm').format('hh:mm a')}
                       endtime = {moment(endtime,'HH:mm').format('hh:mm a')}

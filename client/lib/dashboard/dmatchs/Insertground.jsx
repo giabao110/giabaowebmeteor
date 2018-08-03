@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react-dom';
 import { Meteor } from 'meteor/meteor';
 
 export default class Insertground extends React.Component {

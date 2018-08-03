@@ -45,13 +45,11 @@ class Navigation extends Component {
       if (loggedIn) {
         if (currentUser.profile.roles == "admin")
         {
-          console.log(currentUser.profile.roles);
           dashboard = <li><Link to="/dashboard">Dashboard</Link></li>;
           avt = <img className="nav__user-img" src={currentUser.profile.avt} alt=""/>;
         }
         if (currentUser.profile.roles == "user") {
-          console.log(currentUser.profile.roles);
-          dashboard = <li><Link to="/grounds">Messages</Link></li>; 
+          dashboard = <li><Link to="/">Messages</Link></li>; 
           avt = <img className="nav__user-img" src={currentUser.profile.avt} alt=""/>;
         }
       } 
@@ -68,9 +66,9 @@ class Navigation extends Component {
                   <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
                 </form> 
                 <ul className="nav__links medium f_22"> 
-                  <li><Link to="/">Find Match</Link></li>
-                  <li><Link to="/grounds">Grounds</Link></li>
-                  <li><Link to="/">Upcoming</Link></li>
+                  <li><Link to="/matchs">Find Match</Link></li>
+                  <li><Link to="/">Grounds</Link></li>
+                  <li><Link to="*">Upcoming</Link></li>
                   <span className="regular f_20 ">{this.props.incompleteCount}</span>
                   {dashboard}
                   <li><Link to="/profile">Profile</Link></li> 

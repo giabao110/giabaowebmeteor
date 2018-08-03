@@ -99,3 +99,17 @@
   margin-left: 23px;
   margin-top: 10.5px;
 }
+
+a.stp2__a:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px){
+  .stp2__celendar {
+    height: 28px;
+  }
+  .stp2__share{
+    height: 28px;
+  }
+}

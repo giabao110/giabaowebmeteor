@@ -6,7 +6,7 @@ class GroundInfo extends React.Component {
       return (
       <div className="headerground">
         <div className="headerground__back">
-           <Link to="/Grounds">
+           <Link to="/">
               <div className="headerground__backicon icon-back2"></div>
            </Link>
         </div>

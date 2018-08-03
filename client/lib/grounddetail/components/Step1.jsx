@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import Step2 from './Step2';
+import SliderStep1 from './SliderStep1';
 
 const customStyles = {
   content : {
@@ -74,10 +75,14 @@ class App extends React.Component {
                   <span className="f_24 g_6 stp1__infopadd">|</span>
                   <span className="f_24 g_6">{this.props.location}</span>
                </div>
-               <div className="regular f_22">
-               {this.props.month} {this.props.year}
+               <div className="stp__btn regular f_22">
+               <button className="stp1__next"></button>
+               <button className="stp1__cen">{this.props.month.toUpperCase()} {this.props.year}</button>
+               <button className="stp1__pre"></button>
                </div>
             </div>
+            <div><SliderStep1/></div>
+            <img className="stp1__imgtest" src="../../img/step1/sliderstep1.jpg" alt=""/>
             <div className="stp1_checker">
                <label className="checkbox">
                <input type="checkbox" id="checkbox_1"/>

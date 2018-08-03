@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import Listgrounds from "./Listgrounds";
 import { withTracker } from 'meteor/react-meteor-data';
 import { GroundsCol } from '../../../../imports/api/grounds';
@@ -35,13 +34,13 @@ class Grounds extends React.Component {
         <thead>
           <tr className="bold f_24">
             <th scope="col">#</th>
-            <th scope="col">Username</th>
             <th scope="col">Stadium</th>
             <th scope="col">Content</th>
             <th scope="col">Location</th>
             <th scope="col">Rating</th>
             <th scope="col">Price</th>
             <th scope="col">Status</th>
+            <th scope="col">OPDay</th>
           </tr>
         </thead>
           <tbody>

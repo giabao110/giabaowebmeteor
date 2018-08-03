@@ -16,9 +16,9 @@ class Matchs extends Component {
     return { isAuthenticated: Meteor.userId() !== null };
   }
   render() {
-    let day = this.props.matchs.dateop.toString(),
-          starttime = this.props.matchs.starttime,
-          endtime = this.props.matchs.endtime;
+    let day = this.props.matchs.dateop.toString();
+    let starttime = this.props.matchs.starttime;
+    let endtime = this.props.matchs.endtime;
     let currentUser = this.props.currentUser;
     let userDataAvailable = (currentUser !== undefined);
     let loggedIn = (currentUser && userDataAvailable);

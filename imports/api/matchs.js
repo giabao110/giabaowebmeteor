@@ -13,8 +13,8 @@ if (Meteor.isServer) {
 
 Meteor.methods({
   'matchs.insert'(name,dateop,starttime,endtime,players,rating,day,location) {
-  
     MatchsCol.insert({
+      _id: new Mongo.ObjectID(),
       name,
       dateop: new Date(dateop),
       starttime,
@@ -34,8 +34,7 @@ Meteor.methods({
     });
   },
 
-  'matchs.remove'(taskId) {
-    check(taskId, String);
-    Tasks.remove(taskId);
-  },
+  'matchs.remove'(matchId) {
+    MatchsCol.remove(matchId);
+  }
 });

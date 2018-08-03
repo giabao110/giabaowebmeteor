@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Grounds from './dgrounds/Grounds';
+import Matchs from './dmatchs/Matchs';
 
 class Dashboard extends React.Component {
     render() {
@@ -9,31 +10,10 @@ class Dashboard extends React.Component {
       <div className="dashboard header__">
           <div className="header__left">
               <div className="light f_70">
-                <span>Dashboard ( 6 )</span>
+                <span>Dashboard Matchs</span>
               </div>
-              {/* <div className="header__box">
-                <div className="header__col-rating ">
-                    <div className="input-group">
-                      <select className="regular header__border f_24" ref="sortrate">
-                      <option value="">Rating</option>
-                          <option value="1" >✮</option>
-                          <option value="2" >✮✮</option>
-                          <option value="3" >✮✮✮</option>
-                          <option value="4" >✮✮✮✮</option>
-                          <option value="5" >✮✮✮✮✮</option>
-                      </select>
-                    </div>
-                </div>
-              </div> */}
           </div>
           <div className="header__right">
-              <form className="padding padding-search form-inline" >
-              <datalist id="matchs">
-                <option value="Hanoi ACB"/>
-                <option value="Arsenal"/>
-                <option value="Barcelona"/>
-              </datalist>
-              </form>
               <input onChange={this.handleSearch} className="header__search regular f_22" list="matchs" type="search" placeholder=" Search dashboard..." ref="search" />
           </div>
         </div>
@@ -41,10 +21,10 @@ class Dashboard extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="medium f_32 nav-item active">
-                <Link className="nav-link" to="/">Matchs <span className="sr-only">(current)</span></Link>
+                <Link className="nav-link" to="/dashboard">Ground <span className="sr-only">(current)</span></Link>
               </li>
-              <li className="medium f_32 nav-item active">
-                <Link className="nav-link" to="/">Ground <span className="sr-only">(current)</span></Link>
+              <li className="btn-click medium f_32 nav-item active">
+                <Link className="nav-link" to="/dashboard/matchs">Matchs <span className="sr-only">(current)</span></Link>
               </li>
               {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,7 +47,8 @@ class Dashboard extends React.Component {
           </form> */}
         </div>
       </nav>
-      <Grounds/>
+      {/* <Grounds/> */}
+      <Matchs/>
     </div>
         );
       }
