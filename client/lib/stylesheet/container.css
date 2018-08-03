@@ -1,10 +1,5 @@
 /* RESET CSS3 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -82,7 +77,6 @@ body ul{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
 
 /* FONT SIZE */
 /* 20 */
@@ -173,7 +167,6 @@ body ul{
 .g_8{
   color: #888888;
 }
-
 
 @font-face {
   font-family: 'icomoon';
@@ -322,10 +315,7 @@ body ul{
   margin-right:1px;
 }
 
-
 .class_name:before{content:”\f156″; color:#f00}
-
-
 
 html {
   height: 100%;

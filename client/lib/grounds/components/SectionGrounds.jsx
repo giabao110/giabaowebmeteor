@@ -21,12 +21,11 @@ class SectionGrounds extends Component {
     // matchs = matchs.filter(match => match.day === this.state.strDay.toString());
 
     if(this.state.strSortRate.toString() !== '')
-    grounds = grounds.filter(ground => ground.rating.toString() === this.state.strSortRate);
+      grounds = grounds.filter(ground => ground.rating.toString() === this.state.strSortRate);
 
     if(this.state.strSearch.toString() !== '')
-    grounds = grounds.filter(ground => ground.namesta.toLowerCase().includes(this.state.strSearch.toLowerCase()));
+      grounds = grounds.filter(ground => ground.namesta.toLowerCase().includes(this.state.strSearch.toLowerCase()));
     
-
     return grounds.map((grounds) =><Grounds key={grounds._id} grounds={grounds}/>)
   }
 
@@ -44,13 +43,13 @@ class SectionGrounds extends Component {
 
     render() {
       return (
-      <div>
-        <Headergrounds onClickSearchGo={this.handleSearch} onClickSortRate={this.handleSortRate}/>
-        <div className="sectionground-div-row">
+        <div>
+          <Headergrounds onClickSearchGo={this.handleSearch} onClickSortRate={this.handleSortRate}/>
+          <div className="sectionground-div-row">
             {this.renderGrounds()}
-          <div className="sectionground-groupwhile"></div>  
+            <div className="sectionground-groupwhile"></div>  
+          </div>
         </div>
-      </div>
       );
     }
   }
@@ -58,6 +57,6 @@ class SectionGrounds extends Component {
   export default withTracker(() => {
     Meteor.subscribe('grounds');
     return {
-      grounds: GroundsCol.find({}, { sort: { createdAt: -1 } }).fetch(),           
+      grounds: GroundsCol.find({}, { sort: { createdAt: 1 } }).fetch(),           
       };
 })(SectionGrounds);

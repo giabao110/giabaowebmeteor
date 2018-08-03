@@ -3,10 +3,8 @@ import Comments from './Comments';
 import History from './History';
 import Info from './Info';
 import GroundInfo from './GroundInfo';
-
 import { withTracker } from 'meteor/react-meteor-data';
 import { GroundsCol } from '../../../../imports/api/grounds';
-
 
 class Grounddetail extends React.Component {
   renderInfo() {
@@ -16,14 +14,14 @@ class Grounddetail extends React.Component {
   }
     render() {
       return (
-        <div>
-          <GroundInfo/>
+          <div>
+            <GroundInfo/>
             <Info/>
             <div className="headerground__layout">
-          <Comments/>
-          <History/>
-        </div>
-     </div>
+            <Comments/>
+            <History/>
+          </div>
+      </div>
       );
     }
   }

@@ -12,11 +12,11 @@ class Navigation extends Component {
     };
   }
 
-  getMeteorData(){
+  getMeteorData = () =>{
     return { isAuthenticated: Meteor.userId() !== null };
   }
 
-  componentWillMount(){
+  componentWillMount = () =>{
     if (!this.state.isAuthenticated) {
       this.props.history.push('/login');
     }
@@ -28,12 +28,12 @@ class Navigation extends Component {
     }
   }
   
-  logout = () =>{
+  logout = () => {
     Meteor.logout((error) => {
     if (error) {
         console.log(error);
     } else {
-      this.props.history.push('/login')
+        this.props.history.push('/login')
       }
     });  
   }
@@ -49,55 +49,68 @@ class Navigation extends Component {
           avt = <img className="nav__user-img" src={currentUser.profile.avt} alt=""/>;
         }
         if (currentUser.profile.roles == "user") {
-          dashboard = <li><Link to="/">Messages</Link></li>; 
+          dashboard = <li><Link to="*">Messages</Link></li>; 
           avt = <img className="nav__user-img" src={currentUser.profile.avt} alt=""/>;
         }
       } 
       return(
-        <div className="nav">
-          <div className="football__wraper">
-            <div className="nav__wrap">
-              <nav className="nav__items">
-                <div>
-                  <span className="icon-brand"></span>
-                  <Link to="/" className="nav__logo-brand-name regular f_36" href="/">Football<span className="bold">Party</span></Link>
+      <div className="nav">
+        <div className="football__wraper">
+          <div className="nav__wrap">
+            <nav className="nav__items">
+              <div>
+                <span className="icon-brand"></span>
+                <Link to="/" className="nav__logo-brand-name regular f_36" href="/">
+                Football<span className="bold">Party</span></Link>
+              </div>
+              <form className="padding padding-search form-inline ">    
+                <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
+              </form>
+              <ul className="nav__links medium f_22">
+                <li>
+                  <Link to="/matchs">
+                  Find Match</Link>
+                </li>
+                <li>
+                  <Link to="/">
+                  Grounds</Link>
+                </li>
+                <li>
+                  <Link to="*">
+                  Upcoming</Link>
+                </li>
+                <span className="regular f_20 ">{this.props.incompleteCount}</span>
+                {dashboard}
+                <li>
+                  <Link to="/profile">
+                  Profile</Link>
+                </li>
+              </ul>
+            </nav>
+            <div className="nav__right">
+              <div className="nav__user">
+                {avt}
+              </div>
+              <div className="dropdown medium f_22 g_5">
+                <a className="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                { loggedIn ? currentUser.username : '' }
+                </a>
+                { loggedIn ?  
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a className="dropdown-item medium f_24 g_5" href="#">Change Password</a>
+                  <a onClick={this.logout} className="dropdown-item medium f_24 g_5" href="#">Logout</a>
                 </div>
-                <form className="padding padding-search form-inline ">    
-                  <input className="nav__search regular f_22" type="search" placeholder="Search ground, team or someone..." aria-label="Search" />
-                </form> 
-                <ul className="nav__links medium f_22"> 
-                  <li><Link to="/matchs">Find Match</Link></li>
-                  <li><Link to="/">Grounds</Link></li>
-                  <li><Link to="*">Upcoming</Link></li>
-                  <span className="regular f_20 ">{this.props.incompleteCount}</span>
-                  {dashboard}
-                  <li><Link to="/profile">Profile</Link></li> 
-                </ul>
-              </nav>
-              <div className="nav__right">
-                <div className="nav__user">
-                  {avt}
-                </div>
-                <div className="dropdown medium f_22 g_5">
-                  <a className="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  { loggedIn ? currentUser.username : '' }
-                  </a>
-                  { loggedIn ?  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a className="dropdown-item medium f_24 g_5" href="#">Change Password</a>
-                    <a onClick={this.logout} className="dropdown-item medium f_24 g_5" href="#">Logout</a>
-                  </div> : '' }
-                 
-                </div>
+                : '' }
               </div>
             </div>
           </div>
         </div>
+      </div>
       );
     }
   } 
   export default withTracker(() => {
     Meteor.subscribe('matchs');
-    Meteor.subscribe('users');
     return {
       incompleteCount: MatchsCol.find({}).count(),
       currentUser: Meteor.user(),

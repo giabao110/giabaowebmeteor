@@ -29,8 +29,6 @@ Meteor.methods({
       team: Meteor.users.findOne(this.userId).profile.teamname,
       logo: Meteor.users.findOne(this.userId).profile.logoteam,
       avt: Meteor.users.findOne(this.userId).profile.avt,
-    /*   owner: this.userId,
-      username: Meteor.users.findOne(this.userId).username, */
     });
   },
 

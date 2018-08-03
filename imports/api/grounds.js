@@ -2,7 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
 
-// var day = new Date();
 export const GroundsCol = new Mongo.Collection('grounds');
  
 if (Meteor.isServer) {

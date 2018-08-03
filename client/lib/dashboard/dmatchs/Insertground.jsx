@@ -33,7 +33,6 @@ export default class Insertground extends React.Component {
     const starttime = this.starttime.current.value;
     const endtime = this.endtime.current.value;
     const players = this.players.current.value;
-    // var starttime = document.getElementById("startTime").value;
     if (this.status.current.value == "true")
     {
       var bool = true;
@@ -57,6 +56,7 @@ export default class Insertground extends React.Component {
     this.date.current.value = "";
     this.starttime.current.value = "";
     this.endtime.current.value = "";
+    this.players.current.value = "";
 
     return swal({
       title: "Insert Successfully",
@@ -106,7 +106,7 @@ export default class Insertground extends React.Component {
                 <label >Start time: </label>
                 <input type="time" id="startTime" ref={this.starttime}/>
               </div>
-               <div className="col-md-2 mb-2">
+              <div className="col-md-2 mb-2">
                 <label >End time: </label>
                 <input type="time" id="endTime" ref={this.endtime}/>
               </div>
@@ -159,4 +159,3 @@ export default class Insertground extends React.Component {
         );
       }
     }
-        

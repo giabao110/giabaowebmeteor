@@ -17,28 +17,25 @@ class Comments extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const text = this.text.current.value;
- 
     Meteor.call('comments.insert',text);
-
     this.text.current.value = "";
   }
 
   render() {
       return (
         <div className="info__left">
-        <div className="headerground__title">
-           <span className="regular f_40">Comments & Reviews <span className="headerground__title-count f_24 g_3">( {this.props.incompleteCount} )</span></span>
+          <div className="headerground__title">
+            <span className="regular f_40">Comments & Reviews <span className="headerground__title-count f_24 g_3">( {this.props.incompleteCount} )</span></span>
+          </div>
+          <div className="headerground-wrap">
+            {this.renderComments()}
+            <hr className="sexy_linee"/>
+            <form className="headerground__form" onSubmit={this.handleSubmit.bind(this)}>
+              <input className="headerground__comment_input italic f_24" placeholder="Type your comment here ..." ref={this.text}/>  
+              <button className="headerground__comment_btn regular f_24">Send</button>
+            </form>
+          </div>
         </div>
-        <div className="headerground-wrap">
-          {this.renderComments()}
-          <hr className="sexy_linee"/>
-          <form className="headerground__form" onSubmit={this.handleSubmit.bind(this)}>
-          
-            <input className="headerground__comment_input italic f_24" placeholder="Type your comment here ..." ref={this.text}/>  
-            <button className="headerground__comment_btn regular f_24">Send</button>
-          </form>
-        </div>
-     </div>
       );
     }
   }

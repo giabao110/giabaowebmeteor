@@ -2,7 +2,6 @@ import React from 'react';
 import Listgrounds from "./Listgrounds";
 import { withTracker } from 'meteor/react-meteor-data';
 import { GroundsCol } from '../../../../imports/api/grounds';
-import { MatchsCol } from '../../../../imports/api/matchs';
 import Insertground from './Insertground';
 
 class Grounds extends React.Component {
@@ -28,27 +27,27 @@ class Grounds extends React.Component {
     }
 
     render() {
-    return (
-     <div>
-       <table className="regular f_24 table table-dark">
-        <thead>
-          <tr className="bold f_24">
-            <th scope="col">#</th>
-            <th scope="col">Stadium</th>
-            <th scope="col">Content</th>
-            <th scope="col">Location</th>
-            <th scope="col">Rating</th>
-            <th scope="col">Price</th>
-            <th scope="col">Status</th>
-            <th scope="col">OPDay</th>
-          </tr>
-        </thead>
-          <tbody>
-            {this.renderListmatchs()}
-          </tbody>
-        </table>  
-        <Insertground edit={this.state.strEdit}/>
-    </div>
+      return (
+        <div>
+          <table className="regular f_24 table table-dark">
+            <thead>
+              <tr className="bold f_24">
+                <th scope="col">#</th>
+                <th scope="col">Stadium</th>
+                <th scope="col">Content</th>
+                <th scope="col">Location</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Price</th>
+                <th scope="col">Status</th>
+                <th scope="col">OPDay</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderListmatchs()}
+            </tbody>
+          </table>
+          <Insertground edit={this.state.strEdit}/>
+      </div>
         );
       }
     }

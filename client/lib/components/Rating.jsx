@@ -1,7 +1,7 @@
 var Rating = require('react-rating');
 import React from 'react';
 
-class Rate extends React.Component {
+export default class Rate extends React.Component {
   render() {
     return (
         <Rating
@@ -10,8 +10,6 @@ class Rate extends React.Component {
           initialRating={this.props.rate}
           readonly
         />
-        );
-      }
+      );
     }
-
-export default Rate;
+  }
